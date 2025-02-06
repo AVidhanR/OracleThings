@@ -20,8 +20,21 @@ BEGIN
     	ELSE 0
     END);
 	*/
-
 	v_total_sal := (v_sal_inc * v_sal) + v_sal;
     dbms_output.put_line('Salary increement is: ' || (v_sal_inc * v_sal));
 	dbms_output.put_line('Final salary for ' || v_job_id || ' is: ' || v_total_sal);
+
+    dbms_output.put_line('---');
+    dbms_output.put_line('Standalone CASE usage');
+	-- standalone CASE usage
+	CASE
+        WHEN (v_job_id = 'IT_PROG' OR v_job_id = 'SA_MEN') THEN
+        	v_sal_inc := 0.2;
+			dbms_output.put_line('Salary increement is: ' || (v_sal_inc * v_sal));
+		WHEN v_job_id = 'SA_REP' THEN
+            v_sal_inc := 0.3;
+			dbms_output.put_line('Salary increement is: ' || (v_sal_inc * v_sal));
+		ELSE
+            dbms_output.put_line('Please enter valid salary');
+	END CASE;
 END;
