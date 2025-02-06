@@ -1,5 +1,5 @@
 -- run only once
-SET SERVEROUTPUT ON;
+SET serveroutput ON;
 
 DECLARE
 	v_emp_job_id hr.employees.job_id%TYPE;
