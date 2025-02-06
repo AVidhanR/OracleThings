@@ -1,4 +1,5 @@
-SET SERVEROUTPUT ON;
+SET SERVEROUTPUT ON; -- run once
+
 DECLARE
     -- declaration field
 BEGIN
