@@ -1,4 +1,4 @@
--- run the below SET comand only once
+-- run the below SET command only once
 SET serveroutput ON;
 
 -- run the below CREATE command once
