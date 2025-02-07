@@ -7,6 +7,7 @@ BEGIN
     <<outer_loop>>
     FOR v_outer IN 1..5 LOOP
     	dbms_output.put_line('The outer loop var: ' || v_outer);
+        v_inner := 1;
 
     	<<inner_loop>>
     	LOOP
