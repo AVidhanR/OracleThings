@@ -28,3 +28,11 @@ WHERE department_id IN (
     	WHERE state_province = 'Texas'
     )
 );
+-- or use ALL()
+SELECT job_id, SUM(salary) AS total_sal, COUNT(employee_id) AS no_emp
+FROM hr.employees
+GROUP BY job_id
+HAVING MAX(employee_id) >= ALL(
+    SELECT COUNT(employee_id)
+    FROM hr.employees
+);
