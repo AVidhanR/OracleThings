@@ -1,11 +1,13 @@
-SET SERVEROUTPUT ON; -- run once
+-- run the below SET command once
+SET serveroutput ON; 
 
 DECLARE
     -- declaration field
 BEGIN
-    DBMS_OUTPUT.PUT_LINE('Hello, World!');
+    -- operation field
+    dbms_output.put_line('Hello, World!');
     -- nested block
     BEGIN
-        DBMS_OUTPUT.PUT_LINE('PL/SQL');
+        dbms_output.put_line('PL/SQL');
     END;
 END;
