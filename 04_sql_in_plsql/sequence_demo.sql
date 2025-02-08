@@ -1,7 +1,7 @@
--- run the below SET command only once
+-- run the below SET command once
 SET serveroutput ON;
 
--- run the below DROP command only once
+-- run the below DROP command once
 DROP TABLE emp;
 
 -- run the below CREATE command once
