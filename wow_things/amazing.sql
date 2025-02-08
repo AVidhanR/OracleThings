@@ -1,3 +1,4 @@
+-- GROUP BY usage wrt. ORDER BY
 SELECT TO_CHAR(hire_date, 'Mon') AS month_name, 
        COUNT(employee_id) AS employee_count
 FROM hr.employees
