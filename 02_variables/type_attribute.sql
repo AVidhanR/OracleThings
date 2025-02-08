@@ -1,4 +1,4 @@
--- run only once
+-- run the below SET command once
 SET serveroutput ON;
 
 DECLARE
@@ -9,7 +9,8 @@ BEGIN
     v_emp_job_id := 'IT_PROG';
 	v_emp_demo := NULL;
 	v_emp_fn := 'AVidhanR'; -- can't assign NULL as the variable is NOT NULL irrespective of the column
-	DBMS_OUTPUT.PUT_LINE(v_emp_job_id);
-	DBMS_OUTPUT.PUT_LINE(v_emp_demo || 'Can assign NULL to a NOT NULL col attribute. If you don''t want to then explicitly keep NOT NULL to the variable as well');
-	DBMS_OUTPUT.PUT_LINE('My name is: ' || v_emp_fn);
+	dbms_output.put_line(v_emp_job_id);
+	dbms_output.put_line(v_emp_demo || 'Can assign NULL to a NOT NULL col attribute. If you don''t want to then explicitly keep NOT NULL to the variable as well');
+	dbms_output.put_line('My name is: ' || v_emp_fn);
 END;
+/
