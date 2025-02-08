@@ -1,4 +1,4 @@
--- run only once
+-- run the below SET command once
 SET serveroutput ON;
 
 BEGIN <<outer>>
@@ -24,3 +24,4 @@ BEGIN
 dbms_output.put_line('Outer variable (same name): ' || v_text);
 END;
 END outer;
+/
