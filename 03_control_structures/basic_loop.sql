@@ -1,4 +1,4 @@
--- run only once
+-- run the below SET command once
 SET serveroutput ON;
 
 DECLARE
@@ -10,3 +10,4 @@ BEGIN
 		EXIT WHEN v_counter > 10;
 	END LOOP;
 END;
+/
