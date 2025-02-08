@@ -1,4 +1,4 @@
--- below command, run only once
+-- run the below SET command once 
 SET serveroutput ON;
 
 BEGIN
@@ -12,3 +12,4 @@ BEGIN
 		dbms_output.put_line(i);
 	END LOOP;
 END;
+/
