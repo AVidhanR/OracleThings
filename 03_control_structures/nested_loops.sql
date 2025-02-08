@@ -1,4 +1,4 @@
--- the below command, run only once
+-- run the below SET command once
 SET serveroutput ON;
 
 DECLARE
@@ -20,3 +20,4 @@ BEGIN
 
     END LOOP outer_loop;
 END;
+/
