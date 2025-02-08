@@ -1,4 +1,4 @@
--- run only once
+-- run the below SET command once
 SET serveroutput ON;
 
 DECLARE
@@ -9,3 +9,4 @@ BEGIN
 		v_counter := v_counter + 1;
 	END LOOP;
 END;
+/
