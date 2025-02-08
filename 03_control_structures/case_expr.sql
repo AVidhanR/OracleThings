@@ -1,4 +1,4 @@
--- run only once
+-- run the below SET command once
 SET serveroutput ON;
 
 DECLARE
@@ -38,3 +38,4 @@ BEGIN
             dbms_output.put_line('Please enter valid salary');
 	END CASE;
 END;
+/
