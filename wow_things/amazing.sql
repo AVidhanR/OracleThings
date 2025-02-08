@@ -28,6 +28,7 @@ WHERE department_id IN (
     	WHERE state_province = 'Texas'
     )
 );
+
 -- or use ALL()
 SELECT job_id, SUM(salary) AS total_sal, COUNT(employee_id) AS no_emp
 FROM hr.employees
