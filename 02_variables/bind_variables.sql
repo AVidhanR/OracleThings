@@ -1,8 +1,9 @@
--- run only once
+-- run the below SET command once
 SET serveroutput ON;
 
 VARIABLE var_text VARCHAR2(20);
 VARIABLE var_num NUMBER;
+
 DECLARE
 	v_text VARCHAR2(20);
 BEGIN
