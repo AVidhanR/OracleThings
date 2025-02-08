@@ -14,3 +14,4 @@ BEGIN
     -- cannot use BOOLEAN values to print but as a conditional
     -- checkers in if-else or loops or in any other cases
 END;
+/
