@@ -16,7 +16,7 @@ BEGIN
 	dbms_output.put_line('Bind Variables: ' || :var_text || ' ' || :var_num);
 	dbms_output.put_line('Variables under DECLARE: ' || v_text);
 END;
-
+/
 /*
 NOTE:
   - Cannot run the above code in the Oracle LIVE SQL.
