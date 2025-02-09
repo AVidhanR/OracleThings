@@ -1,0 +1,2 @@
+## SQL in PL-SQL 
+Using `Oracle SQL` in PL-SQL, this directory contains all the demos on the CRUD operations on SQL using PL-SQL 
