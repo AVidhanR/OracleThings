@@ -29,9 +29,18 @@ BEGIN
         || t_emp_rec.salary || ' hired on ' || t_emp_rec.hire_date);
 
 	-- or, get them using the SELECT statement by specifying the fields
-	SELECT first_name, last_name, salary, hire_date INTO t_emp_rec
-        FROM hr.employees
-        WHERE employee_id = '101';
+	SELECT
+		first_name,
+		last_name,
+		salary,
+		hire_date
+	INTO
+		t_emp_rec
+    FROM
+		hr.employees
+    WHERE
+		employee_id = '101';
+
 	dbms_output.put_line('Using SELECT statement, ');
 	dbms_output.put_line(t_emp_rec.first_name || ' ' || t_emp_rec.last_name || ' with salary ' 
         || t_emp_rec.salary || ' hired on ' || t_emp_rec.hire_date);
