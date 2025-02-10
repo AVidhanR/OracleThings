@@ -38,3 +38,7 @@ HAVING MAX(employee_id) >= ALL(
     SELECT COUNT(employee_id)
     FROM hr.employees
 );
+
+-- this is possible
+SELECT LOWER(TRIM('H' FROM 'Hello World')) AS required_result
+FROM DUAL;
