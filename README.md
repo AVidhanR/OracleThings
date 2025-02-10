@@ -29,7 +29,8 @@ Directory structure:
     │   ├── insert_demo.sql
     │   ├── select_demo.sql
     │   ├── sequence_demo.sql
-    │   └── update_demo.sql
+    │   ├── update_demo.sql
+    |   └── README.md
     └── wow_things/
         └── amazing.sql
 ```
