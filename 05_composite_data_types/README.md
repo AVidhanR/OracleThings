@@ -14,3 +14,7 @@ IS VARRAY(size)
 OF data_type;
 ```
 Where `OF data_type` is only for `VARRAY` - Variable Sized Array.
+Drop a `TYPE` for example,
+```sql
+DROP TYPE type_name;
+```
