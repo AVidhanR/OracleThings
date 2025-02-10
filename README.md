@@ -6,6 +6,9 @@ Current repo directory structure:
 ```txt
 Directory structure:
 └── avidhanr-oraclepl-sql/
+    ├── .github
+    │   └── workflows
+    │       └── readme-update.yml
     ├── README.md
     ├── LICENSE
     ├── 01_intro/
