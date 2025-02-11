@@ -109,7 +109,7 @@ SELECT employee_id,
 FROM hr.employees;
 
 
------------------------------------ part 2
+-- part 2 --
 
 
 -- 1) Retrieve all employee details from the EMPLOYEES table.
