@@ -29,7 +29,15 @@ DECLARE
 	idx NUMBER := 1;
 BEGIN
 	FOR i IN 100..110 LOOP
+    	emp_names.extend;
 		SELECT first_name INTO emp_names(idx)
 		FROM hr.employees
     	WHERE employee_id = i;
-		
+		idx := idx + 1;
+	END LOOP;
+
+	FOR i IN 1..emp_names.last() LOOP
+        dbms_output.put_line(emp_names(i));
+	END LOOP;
+END;
+/
