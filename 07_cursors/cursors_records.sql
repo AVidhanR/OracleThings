@@ -3,7 +3,7 @@ SET serveroutput ON;
 
 
 DECLARE
-    -- not effective (or) avoid it maximum
+    -- not efficient (or) avoid it maximum
     TYPE r_emp IS RECORD (
     	v_first_name hr.employees.first_name%TYPE,
 		v_last_name hr.employees.last_name%TYPE
@@ -33,7 +33,7 @@ DECLARE
         FROM hr.employees
     );
 
-	-- effectient way
+	-- efficient way
 	emp_rec hr.employees%ROWTYPE;
 
 	-- all time effecient way
