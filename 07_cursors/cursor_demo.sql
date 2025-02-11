@@ -1,4 +1,4 @@
--- run the below SET comand once
+-- run the below SET command once
 SET serveroutput ON;
 
 DECLARE
