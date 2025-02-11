@@ -6,9 +6,6 @@ Current repo directory structure:
 ```txt
 Directory structure:
 └── avidhanr-oraclepl-sql/
-    ├── .github
-    │   └── workflows
-    │       └── readme-update.yml
     ├── README.md
     ├── LICENSE
     ├── 01_intro/
@@ -28,12 +25,32 @@ Directory structure:
     │   ├── nested_loops.sql
     │   └── while_loop.sql
     ├── 04_sql_in_plsql/
+    │   ├── README.md
     │   ├── delete_demo.sql
     │   ├── insert_demo.sql
     │   ├── select_demo.sql
     │   ├── sequence_demo.sql
-    │   ├── update_demo.sql
-    |   └── README.md
+    │   └── update_demo.sql
+    ├── 05_composite_data_types/
+    │   ├── README.md
+    │   ├── associative_arrays.sql
+    │   ├── associative_arrays_with_rec.sql
+    │   ├── associative_arrays_with_table.sql
+    │   ├── dml_with_records.sql
+    │   ├── nested_tables.sql
+    │   ├── records.sql
+    │   ├── records_demo.sql
+    │   └── varrays.sql
+    ├── 06_storing_collections_in_tables/
+    │   ├── using_nested_tables.sql
+    │   └── using_varrays.sql
+    ├── 07_cursors/
+    │   ├── cursor_attributes.sql
+    │   ├── cursor_demo.sql
+    │   ├── cursor_for_update.sql
+    │   ├── cursors_loops.sql
+    │   ├── cursors_records.sql
+    │   └── cursors_with_parameters.sql
     └── wow_things/
         └── amazing.sql
 ```
