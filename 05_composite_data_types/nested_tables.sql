@@ -8,10 +8,10 @@ BEGIN
 	emp := emp_table('Vidhan', 'Vin', 'Reddy');
 
 	-- nested TABLE is unbounded
-	emp.extend;
+	emp.extend();
 	emp(4) := 'Koti';
 
-	emp.extend;
+	emp.extend();
 	emp(5) := 'Manohar';
 
 	-- mutable 
@@ -29,7 +29,7 @@ DECLARE
 	idx NUMBER := 1;
 BEGIN
 	FOR i IN 100..110 LOOP
-    	emp_names.extend;
+    	emp_names.extend();
 		SELECT first_name INTO emp_names(idx)
 		FROM hr.employees
     	WHERE employee_id = i;
@@ -48,7 +48,7 @@ DECLARE
 	idx NUMBER := 1;
 BEGIN
 	FOR i IN 100..110 LOOP
-    	emp_names.extend;
+    	emp_names.extend();
 		SELECT first_name INTO emp_names(idx)
 		FROM hr.employees
     	WHERE employee_id = i;
