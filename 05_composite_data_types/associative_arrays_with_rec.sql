@@ -1,0 +1,1 @@
+-- One must use the RECORD with collections
