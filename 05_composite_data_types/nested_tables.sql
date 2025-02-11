@@ -24,7 +24,7 @@ END;
 /
 
 DECLARE
-	TYPE emp_table IS TABLE OF VARCHAR2(30);
+	TYPE emp_table IS TABLE OF hr.employees.first_name%TYPE;
 	emp_names emp_table := emp_table();
 	idx NUMBER := 1;
 BEGIN
