@@ -41,3 +41,27 @@ BEGIN
 	END LOOP;
 END;
 /
+    
+DECLARE
+	TYPE emp_table IS TABLE OF hr.employees.first_name%TYPE;
+	emp_names emp_table := emp_table();
+	idx NUMBER := 1;
+BEGIN
+	FOR i IN 100..110 LOOP
+    	emp_names.extend;
+		SELECT first_name INTO emp_names(idx)
+		FROM hr.employees
+    	WHERE employee_id = i;
+		idx := idx + 1;
+	END LOOP;
+
+	-- DELETE an element in nested table
+	emp_names.delete(4);
+
+	FOR i IN 1..emp_names.count() LOOP
+        IF emp_names.exists(i) THEN
+        	dbms_output.put_line(emp_names(i));
+		END IF;
+	END LOOP;
+END;
+/
