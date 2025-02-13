@@ -34,5 +34,5 @@ END;
 -- check the results
 SELECT * FROM emp;
 
--- [OPTIONAL] DROP it after the usage
-DROP TABLE emp;
+-- [OPTIONAL] DELETE it after the usage or even DROP it
+DELETE emp;
