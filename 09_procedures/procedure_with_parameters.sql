@@ -36,7 +36,14 @@ DECLARE
 	v_sal_inc NUMBER := 1.12;
 BEGIN
     dbms_output.put_line('Increasing the salaries!...');
-    INCREASE_SALARIES(v_sal_inc, 90, v_eff_emp_count);
+
+	-- if one parameter is using NAMED NOTATION
+	-- all should be the same as well
+    INCREASE_SALARIES(
+        v_salary_increase => v_sal_inc, 
+        v_dept_id => 90,
+        v_eff_emp_count => v_eff_emp_count
+    );
     dbms_output.put_line('All the salaries are successfully increased!...');
 	dbms_output.put_line('The number of emp who got salary increment: ' || v_eff_emp_count);
 END;
