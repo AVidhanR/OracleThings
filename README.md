@@ -2,7 +2,7 @@
 - One can learn `Oracle PL/SQL` if they have a basic experience in any programming language.
 - It is easy to understand the syntaxes and experiment on the `SQL` tables using this Procedural Language.
 
-Current repo directory structure:
+<!-- Current repo directory structure:
 ```txt
 Directory structure:
 └── avidhanr-oraclepl-sql/
@@ -54,6 +54,7 @@ Directory structure:
     └── wow_things/
         └── amazing.sql
 ```
+-->
 - Learning from `Udemy` and able to practice parallel coding in the `PL/SQL`
 - I'm using Oracle Live SQL web editor, I know it's not preferrable but situation demands; access the `Oracle Live SQL` from [here](https://livesql.oracle.com/ords/f?p=590:1000)
 - Created & Maintained by [AVidhanR](https://linkedin.com/in/AVidhanR)
