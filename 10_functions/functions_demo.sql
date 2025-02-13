@@ -21,3 +21,13 @@ BEGIN
 	dbms_output.put_line('The average salary for department ID ' || 90 || ' is ' || ROUND(v_avg_sal, 0));
 END;
 /
+
+-- can use them here!
+-- very handy!
+SELECT 
+    employee_id,
+	job_id,
+	salary,
+	get_avg_sal(department_id) avg_sal
+FROM
+	hr.employees;
