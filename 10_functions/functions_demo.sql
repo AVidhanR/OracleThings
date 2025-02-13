@@ -18,6 +18,6 @@ DECLARE
     v_avg_sal NUMBER;
 BEGIN
 	v_avg_sal := get_avg_sal(90);
-	dbms_output.put_line(ROUND(v_avg_sal, 0));
+	dbms_output.put_line('The average salary for department ID ' || 90 || ' is ' || ROUND(v_avg_sal, 0));
 END;
 /
