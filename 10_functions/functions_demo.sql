@@ -1,4 +1,4 @@
--- run the below SET command
+-- run the below SET command once
 SET serveroutput ON;
 
 CREATE OR REPLACE FUNCTION get_avg_sal (
