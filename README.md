@@ -55,6 +55,8 @@ Directory structure:
         └── amazing.sql
 ```
 -->
+## Cheat Sheet for myself
+1. Creating composite data types
 - Learning from `Udemy` and able to practice parallel coding in the `PL/SQL`
 - I'm using Oracle Live SQL web editor, I know it's not preferrable but situation demands; access the `Oracle Live SQL` from [here](https://livesql.oracle.com/ords/f?p=590:1000)
 - Created & Maintained by [AVidhanR](https://linkedin.com/in/AVidhanR)
