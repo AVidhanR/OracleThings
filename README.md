@@ -3,7 +3,7 @@
 - It is easy to understand the syntaxes and experiment on the `SQL` tables using this Procedural Language.
 
 ## Cheat Sheet for Oracle `SQL`
-1. `ORDER BY` clause
+* `ORDER BY` clause
 
 ```sql
 SELECT
@@ -19,14 +19,14 @@ ORDER BY
     ... 
 ```
 
-2. `SELECT DISTINCT` statement
+* `SELECT DISTINCT` statement
 
 ```sql
 SELECT DISTINCT column_1
 FROM table;
 ```
 
-3. Oracle `FETCH` clause syntax
+* Oracle `FETCH` clause syntax
 
 ```sql
 [ OFFSET offset ROWS]
@@ -73,7 +73,7 @@ WHERE
 	discount_message LIKE '%25!%%' ESCAPE '!';
 ```
 
-4. `ROLLUP` operator
+* `ROLLUP` operator
 * The ROLLUP operator in Oracle SQL is used to generate subtotals and grand totals in a result set. It is particularly useful in reporting and data analysis to summarize data at multiple levels of aggregation.
 	* How `ROLLUP` Works \
 	The ROLLUP operator creates a grouping hierarchy from the most detailed level to a grand total. It adds subtotals for each level of the hierarchy and a grand total at the end.
@@ -83,7 +83,7 @@ WHERE
 	GROUP BY ROLLUP (column1, column2, ...);
 	```
 
-5. Oracle `ANY` operator
+* Oracle `ANY` operator
 
 ```sql
 SELECT
@@ -109,7 +109,7 @@ WHERE
     OR c > v3;
 ```
 
-6. Oracle `ALL` operator
+* Oracle `ALL` operator
 
 ```sql
 SELECT
@@ -134,8 +134,9 @@ WHERE
     AND c > v2
     AND c > v3;
 ```
-7. Oracle `UNION` v `JOIN` 
-* A UNION places a result set on top of another, meaning that it appends result sets vertically. However, a join such as INNER JOIN or LEFT JOIN combines result sets horizontally.
+
+*  Oracle `UNION` v `JOIN`
+*  A UNION places a result set on top of another, meaning that it appends result sets vertically. However, a join such as INNER JOIN or LEFT JOIN combines result sets horizontally.
 
 <div align="center"><img src="https://github.com/user-attachments/assets/c4e04c3c-94da-4680-9b44-a9b61b75c20d" width="500px" height="300px" /></div>
 
