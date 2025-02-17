@@ -141,7 +141,12 @@ WHERE
 <div align="center"><img src="https://github.com/user-attachments/assets/c4e04c3c-94da-4680-9b44-a9b61b75c20d" width="500px" height="300px" /></div>
 
 ## Cheat Sheet for Oracle `PL/SQL`
-1. 
+
+## Quick go-through functions
+- [String Functions](https://www.oracletutorial.com/oracle-string-functions/)
+- [Date Functions](https://www.oracletutorial.com/oracle-date-functions/)
+- [Comparision Functions](https://www.oracletutorial.com/oracle-comparison-functions/)
+	- [Decode](https://www.oracletutorial.com/oracle-comparison-functions/oracle-decode/)	
 
 - Learning from `Udemy` and able to practice parallel coding in the `PL/SQL`
 - I'm using Oracle Live SQL web editor, I know it's not preferrable but situation demands; access the `Oracle Live SQL` from [here](https://livesql.oracle.com/ords/f?p=590:1000)
