@@ -1,6 +1,10 @@
 -- run the below SET command once
 SET serveroutput ON;
 
+-- run the below CREATE commands before 
+CREATE TABLE emp AS SELECT * employees WHERE 1 = 1;
+CREATE TABLE dept AS SELECT * FROM departments WHERE 1 = 1;
+
 --------------------------------------------------------------- PROCEDURE
 --1.Create a plsql procedure, that copy the all record of department_id, department_name and
 --location_id of all departments that located in country_id of "US" to a table called "Department_US" using the
