@@ -25,7 +25,7 @@ SELECT SUBSTR(first_name, 1, 3) as "emp_first_name_3"
 
 -- 5) Retrieve employees whose last names contain the letter "A" in any position.
 SELECT * FROM emp 
-    WHERE last_name LIKE '%A%';
+    WHERE UPPER(last_name) LIKE '%A%';
 
 -- 6) Replace 'Manager' with 'Lead' in the job title column for specific employees.
 UPDATE emp 
