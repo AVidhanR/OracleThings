@@ -2,60 +2,7 @@
 - One can learn `Oracle PL/SQL` if they have a basic experience in any programming language.
 - It is easy to understand the syntaxes and experiment on the `SQL` tables using this Procedural Language.
 
-<!-- Current repo directory structure:
-```txt
-Directory structure:
-└── avidhanr-oraclepl-sql/
-    ├── README.md
-    ├── LICENSE
-    ├── 01_intro/
-    │   └── hello_world.sql
-    ├── 02_variables/
-    │   ├── bind_variables.sql
-    │   ├── scalar_vars.sql
-    │   ├── type_attribute.sql
-    │   └── variable_scope.sql
-    ├── 03_control_structures/
-    │   ├── basic_loop.sql
-    │   ├── case_expr.sql
-    │   ├── continue_stt.sql
-    │   ├── for_loop.sql
-    │   ├── goto_stt.sql
-    │   ├── if_ctrl_structure.sql
-    │   ├── nested_loops.sql
-    │   └── while_loop.sql
-    ├── 04_sql_in_plsql/
-    │   ├── README.md
-    │   ├── delete_demo.sql
-    │   ├── insert_demo.sql
-    │   ├── select_demo.sql
-    │   ├── sequence_demo.sql
-    │   └── update_demo.sql
-    ├── 05_composite_data_types/
-    │   ├── README.md
-    │   ├── associative_arrays.sql
-    │   ├── associative_arrays_with_rec.sql
-    │   ├── associative_arrays_with_table.sql
-    │   ├── dml_with_records.sql
-    │   ├── nested_tables.sql
-    │   ├── records.sql
-    │   ├── records_demo.sql
-    │   └── varrays.sql
-    ├── 06_storing_collections_in_tables/
-    │   ├── using_nested_tables.sql
-    │   └── using_varrays.sql
-    ├── 07_cursors/
-    │   ├── cursor_attributes.sql
-    │   ├── cursor_demo.sql
-    │   ├── cursor_for_update.sql
-    │   ├── cursors_loops.sql
-    │   ├── cursors_records.sql
-    │   └── cursors_with_parameters.sql
-    └── wow_things/
-        └── amazing.sql
-```
--->
-## Cheat Sheet for myself
+## Cheat Sheet for Oracle `SQL`
 1. `ORDER BY` clause
 ```sql
 SELECT
@@ -70,11 +17,13 @@ ORDER BY
     {column_1 | col_2_pos} [ASC | DESC] [NULLS FIRST | NULLS LAST],
     ... 
 ```
+
 2. `SELECT DISTINCT` statement
 ```sql
 SELECT DISTINCT column_1
 FROM table;
 ```
+
 3. Oracle `FETCH` clause syntax
 ```sql
 [ OFFSET offset ROWS]
@@ -118,7 +67,74 @@ FROM
 WHERE
 	discount_message LIKE '%25!%%' ESCAPE '!';
 ```
-4. 
+
+4. `ROLLUP` operator
+* The ROLLUP operator in Oracle SQL is used to generate subtotals and grand totals in a result set. It is particularly useful in reporting and data analysis to summarize data at multiple levels of aggregation.
+	* How `ROLLUP` Works \
+	The ROLLUP operator creates a grouping hierarchy from the most detailed level to a grand total. It adds subtotals for each level of the hierarchy and a grand total at the end.
+	```sql
+	SELECT column1, column2, ..., aggregate_function(column)
+	FROM table
+	GROUP BY ROLLUP (column1, column2, ...);
+	```
+
+ 5. Oracle `UNION` v `JOIN` \
+A UNION places a result set on top of another, meaning that it appends result sets vertically. However, a join such as INNER JOIN or LEFT JOIN combines result sets horizontally.
+![Oracle-UNION-vs-INNER-JOIN](https://github.com/user-attachments/assets/c4e04c3c-94da-4680-9b44-a9b61b75c20d)
+
+6. Oracle `ANY` operator
+```sql
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    c > ANY (
+        v1,
+        v2,
+        v3
+    );
+
+-- the below does the same thing as above
+
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    c > v1
+    OR c > v2
+    OR c > v3;
+```
+
+7. Oracle `ALL` operator
+```sql
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    c > ALL (
+        v1,
+        v2,
+        v3
+    );
+
+--  transform the ALL operator
+
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    c > v1
+    AND c > v2
+    AND c > v3;
+```
+
+## Cheat Sheet for Oracle `PL/SQL`
+1. 
+
 - Learning from `Udemy` and able to practice parallel coding in the `PL/SQL`
 - I'm using Oracle Live SQL web editor, I know it's not preferrable but situation demands; access the `Oracle Live SQL` from [here](https://livesql.oracle.com/ords/f?p=590:1000)
 - Created & Maintained by [AVidhanR](https://linkedin.com/in/AVidhanR)
