@@ -4,6 +4,7 @@
 
 ## Cheat Sheet for Oracle `SQL`
 1. `ORDER BY` clause
+
 ```sql
 SELECT
     column_1,
@@ -19,12 +20,14 @@ ORDER BY
 ```
 
 2. `SELECT DISTINCT` statement
+
 ```sql
 SELECT DISTINCT column_1
 FROM table;
 ```
 
 3. Oracle `FETCH` clause syntax
+
 ```sql
 [ OFFSET offset ROWS]
  FETCH  NEXT [  row_count | percent PERCENT  ] ROWS  [ ONLY | WITH TIES ] 
@@ -43,6 +46,7 @@ ORDER BY
 FETCH NEXT 5 ROWS ONLY;
 ```
 * Oracle `BETWEEN DATES`
+
 ```sql
 SELECT
     order_id,
@@ -57,6 +61,7 @@ ORDER BY
     order_date;
 ```
 * Escape characters in `LIKE` operator
+
 ```sql
 -- The following statement retrieves products that have a discount of 25%:
 SELECT
@@ -79,11 +84,12 @@ WHERE
 	```
 
  5. Oracle `UNION` v `JOIN` \
-A UNION places a result set on top of another, meaning that it appends result sets vertically. However, a join such as INNER JOIN or LEFT JOIN combines result sets horizontally.
+* A UNION places a result set on top of another, meaning that it appends result sets vertically. However, a join such as INNER JOIN or LEFT JOIN combines result sets horizontally.
 
 <div align="center"><img src="https://github.com/user-attachments/assets/c4e04c3c-94da-4680-9b44-a9b61b75c20d" width="500px" height="300px" /></div>
 
 7. Oracle `ANY` operator
+
 ```sql
 SELECT
     *
@@ -109,6 +115,7 @@ WHERE
 ```
 
 7. Oracle `ALL` operator
+
 ```sql
 SELECT
     *
