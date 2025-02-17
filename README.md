@@ -80,9 +80,10 @@ WHERE
 
  5. Oracle `UNION` v `JOIN` \
 A UNION places a result set on top of another, meaning that it appends result sets vertically. However, a join such as INNER JOIN or LEFT JOIN combines result sets horizontally.
-![Oracle-UNION-vs-INNER-JOIN](https://github.com/user-attachments/assets/c4e04c3c-94da-4680-9b44-a9b61b75c20d)
 
-6. Oracle `ANY` operator
+<div align="center"><img src="https://github.com/user-attachments/assets/c4e04c3c-94da-4680-9b44-a9b61b75c20d" width="500px" height="300px" /></div>
+
+7. Oracle `ANY` operator
 ```sql
 SELECT
     *
