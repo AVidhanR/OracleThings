@@ -2,7 +2,7 @@
 SET serveroutput ON;
 
 -- run the below CREATE commands before 
-CREATE TABLE emp AS SELECT * employees WHERE 1 = 1;
+CREATE TABLE emp AS SELECT * FROM employees WHERE 1 = 1;
 CREATE TABLE dept AS SELECT * FROM departments WHERE 1 = 1;
 
 --------------------------------------------------------------- PROCEDURE
