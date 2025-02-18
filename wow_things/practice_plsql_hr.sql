@@ -370,9 +370,9 @@ RETURN NUMBER AS
 BEGIN
     v_total_sal := sal + NVL(comm, 0);
     IF v_total_sal >= 15000 THEN
-        v_total_sal := v_total_sal * 0.6;
+        v_total_sal := v_total_sal - (v_total_sal * 0.6);
     ELSIF v_total_sal < 15000 THEN
-        v_total_sal := v_total_sal * 0.25;
+        v_total_sal := v_total_sal - (v_total_sal * 0.25);
     END IF;
     
     RETURN v_total_sal;
