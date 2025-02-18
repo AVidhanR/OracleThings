@@ -205,7 +205,11 @@ create or replace PROCEDURE p_mgremp AS
             job_id, 
             department_id    
         FROM emp
-        WHERE manager_id IS NOT NULL
+        WHERE employee_id IN (
+		SELECT DISTINCT manager_id 
+		FROM emp 
+		WHERE manager_id IS NOT NULL
+	)
     );
     v_count NUMBER := 0;
     r_c c_emp%ROWTYPE;
