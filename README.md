@@ -140,8 +140,6 @@ WHERE
 
 <div align="center"><img src="https://github.com/user-attachments/assets/c4e04c3c-94da-4680-9b44-a9b61b75c20d" width="500px" height="300px" /></div>
 
-## Cheat Sheet for Oracle `PL/SQL`
-
 ## Quick go-through functions
 - [String Functions](https://www.oracletutorial.com/oracle-string-functions/)
 - [Date Functions](https://www.oracletutorial.com/oracle-date-functions/)
