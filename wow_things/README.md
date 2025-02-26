@@ -1,4 +1,4 @@
-## WOW Things in SQL or PLSQL
+## WOW Things in ORACLEs SQL or PLSQL
 * Using `patients` table and to practice visit [link](https://www.sql-practice.com/)
 * The awesome things are added below:
 ```sql
@@ -12,5 +12,4 @@ WHERE
 UPDATE patients
 SET allergies = 'NKA'
 WHERE allergies IS NULL;
-
 ```
