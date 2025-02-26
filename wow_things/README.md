@@ -7,4 +7,10 @@ FROM patients
 WHERE
   first_name LIKE 'C%'
   OR (substr(first_name, 1, 1) = 'C');
+
+--  simple things but, cannot get it on time
+UPDATE patients
+SET allergies = 'NKA'
+WHERE allergies IS NULL;
+
 ```
