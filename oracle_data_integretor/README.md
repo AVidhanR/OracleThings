@@ -13,12 +13,7 @@ CREATE USER odi_demo IDENTIFIED BY odi_demo
     TEMPORARY TABLESPACE temp
     QUOTA 20M ON users;
 
-GRANT
-    CREATE SESSION,
-    CREATE TABLE,
-    CREATE VIEW,
-    CREATE PROCEDURE
-TO odi_demo;
+GRANT DBA TO odi_demo;
 
 SELECT
     username,
