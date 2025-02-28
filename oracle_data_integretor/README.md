@@ -22,5 +22,13 @@ FROM
     dba_users
 WHERE
     username = 'ODI_Demo';
+
+-- or simpler approach!
+CREATE USER ODI_Master IDENTIFIED BY odi_master;
+CREATE USER ODI_Work IDENTIFIED BY odi_work;
+
+GRANT DBA TO ODI_Master;
+GRANT DBA TO ODI_Work;
+-- run line-by-line
 ```
 - Run the above code to create your own schema!
