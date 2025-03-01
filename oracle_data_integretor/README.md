@@ -32,4 +32,4 @@ GRANT DBA TO ODI_Work;
 -- run line-by-line
 ```
 - Run the above code to create your own schema!
-- Login and create a Master repo connection using `Master repo connection wizard` and under the `topology -> repositories -> work repository` create a new work repo with required credentials, use the `ODI_Work` schema.
+- Login and create a Master repo connection using `Master repo connection wizard` and under the `topology -> repositories -> work repository` create a new work repo with required credentials, use the `ODI_Work` as a work/staging schema.
