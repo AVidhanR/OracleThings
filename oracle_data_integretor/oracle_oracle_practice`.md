@@ -1,5 +1,5 @@
-## Let's practie an ODI implementation
-- Initially create a source in `ODI_Src` user and a target table in `ODI_Target` user as below, as I'm performing `Oracle - Oracle`
+## Let's practice an ODI implementation
+- Initially create a source in `ODI_Src` user and a target table in `ODI_Target` user as below, as I'm performing `Oracle - Oracle` tranfer.
 ```sql
 -- to create a target user
 CREATE USER ODI_Target IDENTIFIED BY odi_target;
