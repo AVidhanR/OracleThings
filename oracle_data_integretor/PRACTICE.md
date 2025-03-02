@@ -59,7 +59,7 @@ FROM
 ```
 - Second, create a `Data Server` for source with `ODI_Src` user and password. Similarly, create a `Data Server` for target with `ODI_Target` user and password.
 - After that, create a `Physical Schema` for source and target; assign the schema that has the required tables and assigne `ODI_Work` for the work schema.
-- Third, create a `Logical Schema` for source and target; provide appropiriate physical schema context's.
+- Third, create a `Logical Schema` for source and target; provide appropiriate physical schema context's (use Global context).
 
 > [!IMPORTANT]
 > Always test the connections after creating the data servers and physical schemas.
@@ -69,3 +69,13 @@ FROM
 
 > [!IMPORTANT]
 > Always cross verify the datastores or tables that are imporeted in the model by pressing on the required datastore and checking it's attributes etc.
+
+- Fifth, create a mapping then, drag and drop the source : target tables, link them together and save them.
+- Right click on the mapping and run or generate a scenario.
+- Check the `Operator` tab for output log's; to cross verify go to the `SQL Plus or SQL Developer` and connect to the `ODI_Target` user and run the below `SELECT` statement.
+```sql
+SELECT * FROM target;
+-- that should show all the data similar to the SORUCE table in ODI_Src user/schema
+```
+- Successfully completed the Oracle to Oracle data transfer.
+- Documented by [linkedin.com/in.AVidhanR](https://linkedin.com/in.AVidhanR)
