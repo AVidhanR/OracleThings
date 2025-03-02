@@ -78,4 +78,4 @@ SELECT * FROM target;
 -- that should show all the data similar to the SORUCE table in ODI_Src user/schema
 ```
 - Successfully completed the Oracle to Oracle data transfer.
-- Documented by [linkedin.com/in.AVidhanR](https://linkedin.com/in.AVidhanR)
+- Documented by [in/AVidhanR](https://linkedin.com/in/AVidhanR)
