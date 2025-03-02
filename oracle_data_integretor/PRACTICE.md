@@ -63,3 +63,6 @@ FROM
 
 > [!IMPORTANT]
 > Always test the connections after creating the data servers and physical schemas.
+
+- Fourth, create a new model for source and provide the required logical schema and select the `Selective Reverse-Enginering` to get the required tables.
+- Similarly do the same process to obtain the target table from the `ODI_Target` with the required table.
