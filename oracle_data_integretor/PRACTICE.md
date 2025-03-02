@@ -64,5 +64,8 @@ FROM
 > [!IMPORTANT]
 > Always test the connections after creating the data servers and physical schemas.
 
-- Fourth, create a new model for source and provide the required logical schema and select the `Selective Reverse-Enginering` to get the required tables.
+- Fourth, create a new model for source and provide the required logical schema and select the `Selective Reverse-Enginering` to get the required tables by pressing the `Reverse Engineer` button.
 - Similarly do the same process to obtain the target table from the `ODI_Target` with the required table.
+
+> [!IMPORTANT]
+> Always cross verify the datastores or tables that are imporeted in the model by pressing on the required datastore and checking it's attributes etc.
