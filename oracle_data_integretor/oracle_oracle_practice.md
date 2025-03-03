@@ -57,8 +57,8 @@ FROM
     source;
 ```
 - Second, create a `Data Server` for source with `ODI_Src` user and password. Similarly, create a `Data Server` for target with `ODI_Target` user and password.
-- After that, create a `Physical Schema` for source and target; assign the schema that has the required tables and assigne `ODI_Work` for the work schema.
-- Third, create a `Logical Schema` for source and target; provide appropiriate physical schema context's (use Global context).
+- After that, create a `Physical Schema` for source and target; assign the schema that has the required tables and assign `ODI_Work` for the work schema.
+- Third, create a `Logical Schema` for source and target; provide appropiriate physical schema context's (use Global context for no hassle).
 
 > [!IMPORTANT]
 > Always test the connections after creating the data servers and physical schemas.
