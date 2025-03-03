@@ -33,3 +33,9 @@ GRANT DBA TO ODI_Work;
 ```
 - Run the above code to create your own schema!
 - Login and create a Master repo connection using `Master repo connection wizard` and under the `topology -> repositories -> work repository` create a new work repo with required credentials, use the `ODI_Work` as a work/staging schema.
+- Below is the path where I found my KMs
+```powershell
+Path
+----
+C:\Oracle\ODI12.2.1.4\Middleware\Oracle_Home\odi\sdk\xml-reference
+```
