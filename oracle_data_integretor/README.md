@@ -53,3 +53,5 @@ C:\Oracle\ODI12.2.1.4\Middleware\Oracle_Home\odi\sdk\xml-reference
 ```
 - For any layout issues, click on `Windows` > `Reset Windows to Factory Settings` and done! thanks to ChatGPT!
 
+### Refresh Variables 
+
