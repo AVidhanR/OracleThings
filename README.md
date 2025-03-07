@@ -134,6 +134,10 @@ WHERE
     AND c > v2
     AND c > v3;
 ```
+- To rename a table in Oracle SQL, you can use the RENAME statement. Here's the basic syntax:
+```sql
+RENAME old_table_name TO new_table_name;
+```
 
 ###  Oracle `UNION` v `JOIN`
 *  A UNION places a result set on top of another, meaning that it appends result sets vertically. However, a join such as INNER JOIN or LEFT JOIN combines result sets horizontally.
