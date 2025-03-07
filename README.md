@@ -138,6 +138,7 @@ WHERE
 ```sql
 RENAME old_table_name TO new_table_name;
 ```
+- Commit! After every successful change in the table or db!
 
 ###  Oracle `UNION` v `JOIN`
 *  A UNION places a result set on top of another, meaning that it appends result sets vertically. However, a join such as INNER JOIN or LEFT JOIN combines result sets horizontally.
