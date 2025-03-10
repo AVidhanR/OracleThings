@@ -1,4 +1,4 @@
-## Learn User Functions
+## Learn User Functions in `ODI`
 
 A user function makes sense at this point, and will provide the following benefits:
 - A readable name that makes the usage and understanding of the transformation formula a lot easier
@@ -41,5 +41,5 @@ TRIM($(StringData)s) -- In the Implementation Syntax
 > - User Function names are case sensitive. Make sure that you are using the appropriate combination of uppercase and lowercase characters
 > - Make sure that you are using the appropriate number of parameters, and that they have the appropriate type (string, number or date)
 > - Make sure that there is a definition for the User Function for the technology in which it is running. This last case may be the easiest one to oversee.
----
+
 The Oracle official blog on the topic: [ODI_User_Functions](https://blogs.oracle.com/dataintegration/post/odi-user-functions-a-case-study)
