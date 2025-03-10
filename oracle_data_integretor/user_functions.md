@@ -35,5 +35,11 @@ Implementation syntax: TRIM($(StringData))
 TRIM_DATA($(StringData)s) -- In the Syntax under definition
 TRIM($(StringData)s) -- In the Implementation Syntax
 ```
-
-- Oracle official blog: [ODI_User_Functions](https://blogs.oracle.com/dataintegration/post/odi-user-functions-a-case-study)
+- One can use these user functions directly onto the target table or can do via the expressions table.
+> [!NOTE]
+> When you will execute your interface, the generated code can be reviewed in the Operator interface. Note that you should never see the function names in the generated code. If you do, check out the following elements:
+> - User Function names are case sensitive. Make sure that you are using the appropriate combination of uppercase and lowercase characters
+> - Make sure that you are using the appropriate number of parameters, and that they have the appropriate type (string, number or date)
+> - Make sure that there is a definition for the User Function for the technology in which it is running. This last case may be the easiest one to oversee.
+---
+The Oracle official blog on the topic: [ODI_User_Functions](https://blogs.oracle.com/dataintegration/post/odi-user-functions-a-case-study)
