@@ -5,3 +5,6 @@ Let's get to know about how to write or even implement procedures in `ODI Studio
 - Under the target command `DML DDL` Operations, need to again assign the correct logical schema.
 - One can create multiple tasks and the order of exceutions as well!
 - One can also ignore few specific tasks by checking the ignore checkbox.
+
+Options are very useful in many cases. Such as,
+> Coming soon
