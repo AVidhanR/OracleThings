@@ -4,4 +4,4 @@
 - Get to know the requirement of fact tables.
 - How to connect them?
 
-<p>#ODI Things</p>
+<p>#ODIThings</p>
