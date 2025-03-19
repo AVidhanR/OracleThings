@@ -3,8 +3,28 @@ CREATE USER omr IDENTIFIED BY omr;
 GRANT DBA TO omr;
 
 -- Dimension Tables
--- 1 (complete)
-CREATE TABLE d_customer (
+CREATE TABLE d_payments (
+    payment_id   NUMBER,
+    payment_type VARCHAR2(15),
+    
+    CONSTRAINT pk_payments PRIMARY KEY (payment_id)
+); -- complete
+
+CREATE TABLE d_theatres (
+    theatre_id   NUMBER,
+    screen_no    NUMBER,
+    theatre_name VARCHAR2(20),
+    address      VARCHAR2(50),
+    state        VARCHAR2(50),
+    city         VARCHAR2(50),
+    pincode      NUMBER,
+    show_timing  TIMESTAMP,
+ 
+    CONSTRAINT pk_theatre 
+        PRIMARY KEY (theatre_id)
+);-- complete
+
+CREATE TABLE d_customers (
     name        VARCHAR2(50),
     customer_id NUMBER,
     login_id    NUMBER,
@@ -13,26 +33,10 @@ CREATE TABLE d_customer (
     gender      CHAR,
     age         NUMBER,
     
-    CONSTRAINT pk_customer PRIMARY KEY ( customer_id )
-);
+    CONSTRAINT pk_customer 
+        PRIMARY KEY ( customer_id )
+); -- complete
 
--- 2 (complete)
-CREATE TABLE d_theatre (
-    theatre_id   NUMBER,
-    show_id      NUMBER,
-    screen_no    NUMBER,
-    theatre_name VARCHAR2(20),
-    address      VARCHAR2(50),
-    state        VARCHAR2(50),
-    city         VARCHAR2(50),
-    pincode      NUMBER,
-    show_timing  TIMESTAMP,
-
-    CONSTRAINT pk_theatre PRIMARY KEY ( theatre_id,
-                                        show_id )
-);
- 
--- 3 (complete)
 CREATE TABLE d_movies (
     movie_id   NUMBER,
     movie_name VARCHAR2(50),
@@ -40,25 +44,8 @@ CREATE TABLE d_movies (
     language   VARCHAR2(15),
     rating     NUMBER,
     CONSTRAINT pk_movies PRIMARY KEY ( movie_id )
-);
- 
--- 4 (complete)
-CREATE TABLE d_payments (
-    payment_id   NUMBER PRIMARY KEY,
-    customer_id  NUMBER,
-    day_id      NUMBER,
-    payment_type VARCHAR2(15),
-    payment_date DATE,
-    price        NUMBER,
+); -- no change
 
-    FOREIGN KEY ( customer_id )
-        REFERENCES d_customer ( customer_id ),
-        
-    FOREIGN KEY ( day_id )
-        REFERENCES d_date ( day_id )
-);
- 
--- 5
 CREATE TABLE d_date
     AS
         SELECT
@@ -164,30 +151,23 @@ CREATE TABLE d_date
                     base_calender
                 ORDER BY
                     day_id
-            );
-    
--- alter to add contraint        
-alter table d_date
-add constraint pk_date PRIMARY KEY (day_id);
-
--- fact table
--- 1
+            ); -- complete
+ 
 CREATE TABLE f_movie_reservation (
     customer_id NUMBER,
     movie_id    NUMBER,
     theatre_id  NUMBER,
-    seat_no     NUMBER,
-    show_id     NUMBER,
-    day_id     NUMBER,
     payment_id  NUMBER,
+    payment_date DATE,
+    price       NUMBER,
+    seat_no     NUMBER,
+    
     FOREIGN KEY ( customer_id )
-        REFERENCES d_customer ( customer_id ),
-    FOREIGN KEY ( movie_id )
-        REFERENCES d_movies ( movie_id ),
-    FOREIGN KEY ( theatre_id, show_id )
-        REFERENCES d_theatre ( theatre_id, show_id ),
-    FOREIGN KEY ( day_id )
-        REFERENCES d_date ( day_id ),
+        REFERENCES d_customers ( customer_id ),
+    FOREIGN KEY (movie_id) 
+        REFERENCES d_movies (movie_id),
+    FOREIGN KEY ( theatre_id )
+        REFERENCES d_theatres ( theatre_id ),        
     FOREIGN KEY ( payment_id )
         REFERENCES d_payments (payment_id)
-);
+); -- last complete
