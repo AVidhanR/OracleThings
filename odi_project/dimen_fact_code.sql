@@ -6,7 +6,6 @@ GRANT DBA TO omr;
 CREATE TABLE d_payments (
     payment_id   NUMBER,
     payment_type VARCHAR2(15),
-    payment_date DATE,
     
     CONSTRAINT pk_payments 
         PRIMARY KEY (payment_id)
