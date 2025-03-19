@@ -6,8 +6,10 @@ GRANT DBA TO omr;
 CREATE TABLE d_payments (
     payment_id   NUMBER,
     payment_type VARCHAR2(15),
+    payment_date DATE,
     
-    CONSTRAINT pk_payments PRIMARY KEY (payment_id)
+    CONSTRAINT pk_payments 
+        PRIMARY KEY (payment_id)
 ); -- complete
 
 CREATE TABLE d_theatres (
@@ -153,12 +155,12 @@ CREATE TABLE d_date
                     day_id
             ); -- complete
  
-CREATE TABLE f_movie_reservation (
+CREATE TABLE f_movie_reservations (
     customer_id NUMBER,
     movie_id    NUMBER,
     theatre_id  NUMBER,
     payment_id  NUMBER,
-    payment_date DATE,
+    reserved_date  DATE,
     price       NUMBER,
     seat_no     NUMBER,
     
