@@ -7,4 +7,5 @@
 - How to connect them?
      - According to the requirement, I need to perform a lot of joins to get required data according to the conditions they(whomever it is) ask.
 - Gotta learn the SCD Type with Practical Implementations
+> ER Diagram Coming Soon...
 <p>#ODIThings</p>
