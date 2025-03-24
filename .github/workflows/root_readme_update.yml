@@ -1,0 +1,50 @@
+name: CI (README.md Changes Only)
+
+on:
+  push:
+    paths:
+      - 'README.md'
+  pull_request:
+    paths:
+      - 'README.md'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo "Hello, world! (README.md changed)"
+
+      - name: Run a multi-line script
+        run: |
+          echo "Add other actions to build,"
+          echo "test, and deploy your project (README.md changed)."
+
+      - name: Display environment variables
+        run: |
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "GITHUB_SHA: $GITHUB_SHA"
+          echo "GITHUB_REF: $GITHUB_REF"
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+
+      - name: List files in workspace
+        run: ls -al $GITHUB_WORKSPACE
+
+      - name: Add a timestamp
+        run: |
+          timestamp=$(date +"%Y-%m-%dT%H:%M:%SZ")
+          echo "Workflow run at: $timestamp"
+
+      - name: Example of a more useful task (replace with your actual needs)
+        run: |
+          echo "This is a placeholder for your build/test steps (README.md changed)."
+          # Replace this with your actual build/test commands.
+          # Example:
+          # npm install
+          # npm run build
+          # npm run test
