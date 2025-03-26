@@ -10,5 +10,5 @@
 > ER Diagram Coming Soon... - What's the best ER Diagram site?
 > I'm just curious maybe I need to create a list of them, during my free time.
 - In the fact table I'm thinking to add a new column names `movie_date` of type `DATE` because, one should know for which dates movie he's paying the money for.
-- Soon, I'll be starting with the `OBIEE` let's see what we've got in that.
+- Soon, I'll be starting with the `OBIEE` let's see what we've got in that. `OBI` Architecture is crazy let's see where we will go here.
 <p>#ODIThings</p>
