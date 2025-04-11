@@ -2,16 +2,15 @@
 CREATE USER omr IDENTIFIED BY omr;
 GRANT DBA TO omr;
 
--- Dimension Tables
-CREATE TABLE d_payments (
+CREATE TABLE omr.d_payments (
     payment_id   NUMBER,
     payment_type VARCHAR2(15),
     
-    CONSTRAINT pk_payments 
+    CONSTRAINT pk_payment
         PRIMARY KEY (payment_id)
 ); -- complete
 
-CREATE TABLE d_theatres (
+CREATE TABLE omr.d_theatres (
     theatre_id   NUMBER,
     screen_no    NUMBER,
     theatre_name VARCHAR2(20),
@@ -21,11 +20,11 @@ CREATE TABLE d_theatres (
     pincode      NUMBER,
     show_timing  TIMESTAMP,
  
-    CONSTRAINT pk_theatre 
+    CONSTRAINT pk_theatre
         PRIMARY KEY (theatre_id)
 );-- complete
 
-CREATE TABLE d_customers (
+CREATE TABLE omr.d_customers (
     name        VARCHAR2(50),
     customer_id NUMBER,
     login_id    NUMBER,
@@ -38,16 +37,18 @@ CREATE TABLE d_customers (
         PRIMARY KEY ( customer_id )
 ); -- complete
 
-CREATE TABLE d_movies (
+CREATE TABLE omr.d_movies (
     movie_id   NUMBER,
     movie_name VARCHAR2(50),
     genre      VARCHAR2(15),
     language   VARCHAR2(15),
     rating     NUMBER,
-    CONSTRAINT pk_movies PRIMARY KEY ( movie_id )
-); -- no change
+    
+    CONSTRAINT pk_movie 
+        PRIMARY KEY ( movie_id )
+); -- complete
 
-CREATE TABLE d_date
+CREATE TABLE omr.d_date
     AS
         SELECT
             *
@@ -62,7 +63,7 @@ CREATE TABLE d_date
                         || ', '
                         || rtrim(to_char(currdate, 'YYYY'))                        AS day_name,
                         1                                                          AS num_days_in_day,
-                        currdate                                                   AS day_end_date,
+                        to_date(currdate, 'DD-MM-RR')                              AS day_end_date,
                         to_char(currdate, 'Day')                                   AS week_day_full,
                         to_char(currdate, 'DY')                                    AS week_day_short,
                         TO_NUMBER(TRIM(LEADING '0' FROM to_char(currdate, 'D')))   AS day_num_of_week,
@@ -153,8 +154,18 @@ CREATE TABLE d_date
                 ORDER BY
                     day_id
             ); -- complete
- 
-CREATE TABLE f_movie_reservations (
+
+DESC d_date;
+
+ALTER TABLE omr.d_date ADD CONSTRAINT pk_date PRIMARY KEY (day_end_date);
+
+-- below 2 commands are for Oracle DB Cloud instance
+-- ALTER USER OMR QUOTA UNLIMITED ON DATA;
+-- GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE PROCEDURE TO OMR;
+
+SELECT * FROM omr.d_date;
+
+CREATE TABLE OMR.f_movie_reservations (
     customer_id NUMBER,
     movie_id    NUMBER,
     theatre_id  NUMBER,
@@ -164,11 +175,75 @@ CREATE TABLE f_movie_reservations (
     seat_no     NUMBER,
     
     FOREIGN KEY ( customer_id )
-        REFERENCES d_customers ( customer_id ),
+        REFERENCES omr.d_customers ( customer_id ),
     FOREIGN KEY (movie_id) 
-        REFERENCES d_movies (movie_id),
+        REFERENCES omr.d_movies (movie_id),
     FOREIGN KEY ( theatre_id )
-        REFERENCES d_theatres ( theatre_id ),        
+        REFERENCES omr.d_theatres ( theatre_id ),        
     FOREIGN KEY ( payment_id )
-        REFERENCES d_payments (payment_id)
+        REFERENCES omr.d_payments (payment_id),
+    FOREIGN KEY ( reserved_date )
+        REFERENCES omr.d_date (day_end_date)
 ); -- last complete
+
+select * from tab;
+
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('Alice Smith',1,101,'alice.smith@example.com','1234567890','F',30);
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('Bob Johnson',2,102,'bob.johnson@example.com','9876543210','M',25);
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('Charlie Brown',3,103,'charlie.brown@example.com','5551234567','M',40);
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('Diana Miller',4,104,'diana.miller@example.com','1112223333','F',35);
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('Ethan Davis',5,105,'ethan.davis@example.com','4445556666','M',28);
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('Fiona Wilson',6,106,'fiona.wilson@example.com','7778889999','F',45);
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('George Garcia',7,107,'george.garcia@example.com','1010101010','M',32);
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('Hannah Rodriguez',8,108,'hannah.rodriguez@example.com','2020202020','F',29);
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('Ian Martinez',9,109,'ian.martinez@example.com','3030303030','M',38);
+Insert into OMR.D_CUSTOMERS (NAME,CUSTOMER_ID,LOGIN_ID,EMAIL,PHONE_NO,GENDER,AGE) values ('Julia Anderson',10,110,'julia.anderson@example.com','4040404040','F',31);
+commit;
+
+Insert into OMR.D_MOVIES (MOVIE_ID,MOVIE_NAME,GENRE,LANGUAGE,RATING) values (2001,'Leo','Action','Tamil',9);
+Insert into OMR.D_MOVIES (MOVIE_ID,MOVIE_NAME,GENRE,LANGUAGE,RATING) values (2002,'Bahubali','Fantasy','Telugu',10);
+Insert into OMR.D_MOVIES (MOVIE_ID,MOVIE_NAME,GENRE,LANGUAGE,RATING) values (2003,'Iron Man','Sci-Fi','English',9);
+Insert into OMR.D_MOVIES (MOVIE_ID,MOVIE_NAME,GENRE,LANGUAGE,RATING) values (2004,'Wonder Women','Sci-Fi','English',6);
+Insert into OMR.D_MOVIES (MOVIE_ID,MOVIE_NAME,GENRE,LANGUAGE,RATING) values (2005,'Jawan','Motivation','Hindi',9);
+Insert into OMR.D_MOVIES (MOVIE_ID,MOVIE_NAME,GENRE,LANGUAGE,RATING) values (2006,'Mahanati','Biography','Telugu',9);
+commit;
+
+Insert into OMR.D_PAYMENTS (PAYMENT_ID,PAYMENT_TYPE) values (9001,'UPI');
+Insert into OMR.D_PAYMENTS (PAYMENT_ID,PAYMENT_TYPE) values (9002,'Net Banking');
+Insert into OMR.D_PAYMENTS (PAYMENT_ID,PAYMENT_TYPE) values (9003,'Credit Card');
+commit;
+
+Insert into OMR.D_THEATRES (THEATRE_ID,SCREEN_NO,THEATRE_NAME,ADDRESS,STATE,CITY,PINCODE,SHOW_TIMING) values (3001,3,'PVR Cinemas','RT Nagar','Telengana','Hyderabad',509106,to_timestamp('18-03-25 3:30:00.000000000 PM','DD-MM-RR fmHH12:fmMI:SSXFF AM'));
+Insert into OMR.D_THEATRES (THEATRE_ID,SCREEN_NO,THEATRE_NAME,ADDRESS,STATE,CITY,PINCODE,SHOW_TIMING) values (3002,6,'Sathyam Cinemas','Anna Salai','Tamil Nadu','Chennai',600202,to_timestamp('18-03-25 9:00:00.000000000 AM','DD-MM-RR fmHH12:fmMI:SSXFF AM'));
+Insert into OMR.D_THEATRES (THEATRE_ID,SCREEN_NO,THEATRE_NAME,ADDRESS,STATE,CITY,PINCODE,SHOW_TIMING) values (3003,4,'Prasad IMAX','AT Nagar','Telengana','Hyderabad',107896,to_timestamp('18-03-25 10:30:00.000000000 PM','DD-MM-RR fmHH12:fmMI:SSXFF AM'));
+Insert into OMR.D_THEATRES (THEATRE_ID,SCREEN_NO,THEATRE_NAME,ADDRESS,STATE,CITY,PINCODE,SHOW_TIMING) values (3004,2,'SVC Cinemas','CT Nagar','Andhra Pradesh','Visakhapatnam',535591,to_timestamp('18-03-25 6:30:00.000000000 PM','DD-MM-RR fmHH12:fmMI:SSXFF AM'));
+commit;
+
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (1,2001,3001,9001,to_date('15-03-25','DD-MM-RR'),200,1);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (1,2001,3002,9002,to_date('15-03-25','DD-MM-RR'),200,2);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (3,2004,3003,9003,to_date('15-03-25','DD-MM-RR'),200,3);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (4,2003,3004,9003,to_date('15-03-25','DD-MM-RR'),200,4);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (6,2002,3002,9002,to_date('15-03-25','DD-MM-RR'),200,5);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (7,2005,3001,9001,to_date('16-03-25','DD-MM-RR'),200,6);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (7,2006,3003,9002,to_date('17-03-25','DD-MM-RR'),200,7);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (9,2002,3004,9001,to_date('16-03-25','DD-MM-RR'),200,8);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (10,2002,3004,9001,to_date('18-03-25','DD-MM-RR'),200,9);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (3,2002,3003,9002,to_date('18-03-25','DD-MM-RR'),200,10);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (2,2004,3002,9001,to_date('18-03-25','DD-MM-RR'),200,11);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (2,2003,3002,9001,to_date('19-03-25','DD-MM-RR'),200,12);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (5,2001,3001,9001,to_date('17-03-25','DD-MM-RR'),200,13);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (8,2002,3004,9002,to_date('16-03-25','DD-MM-RR'),200,14);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (5,2002,3003,9003,to_date('17-03-25','DD-MM-RR'),200,15);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (8,2003,3003,9003,to_date('16-03-25','DD-MM-RR'),200,16);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (9,2006,3004,9002,to_date('20-03-25','DD-MM-RR'),200,17);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (1,2006,3001,9001,to_date('17-03-25','DD-MM-RR'),200,18);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (10,2004,3002,9002,to_date('20-03-25','DD-MM-RR'),200,19);
+Insert into OMR.F_MOVIE_RESERVATIONS (CUSTOMER_ID,MOVIE_ID,THEATRE_ID,PAYMENT_ID,RESERVED_DATE,PRICE,SEAT_NO) values (1,2003,3003,9001,to_date('20-03-25','DD-MM-RR'),200,20);
+commit;
+
+select * from omr.D_CUSTOMERS;
+select * from omr.D_MOVIES;
+select * from omr.D_THEATRES;
+select * from omr.D_PAYMENTS;
+select * from omr.D_DATE;
+select * from omr.F_MOVIE_RESERVATIONS;
