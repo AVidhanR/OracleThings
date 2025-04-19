@@ -2,3 +2,5 @@
 -- day 1
 select * from tab;
 create table "demoTable" as (select * from hr.employees);
+
+select * from "demoTable";
