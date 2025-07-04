@@ -39,3 +39,31 @@ COMMIT;
 SELECT * FROM departments_v;
 SELECT * FROM employees_v;
 
+-- Query to find employees whose salary is above the average salary of their department
+-- Using Common Table Expressions (CTE)
+WITH dept_avg_salaries AS (
+    SELECT
+        d.department_id,
+        d.department_name,
+        AVG(e.salary) AS average_department_salary
+    FROM
+        departments_v d
+        JOIN employees_v e ON d.department_id = e.department_id
+    GROUP BY
+        d.department_id,
+        d.department_name
+)
+SELECT
+    e.employee_name,
+    d.department_name,
+    e.salary,
+    das.average_department_salary
+FROM
+    employees_v  e
+    JOIN departments_v  d ON e.department_id = d.department_id
+    JOIN dept_avg_salaries  das ON e.department_id = das.department_id
+WHERE
+    e.salary > das.average_department_salary
+ORDER BY
+    d.department_name,
+    e.employee_name;
