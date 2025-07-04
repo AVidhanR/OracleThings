@@ -154,3 +154,9 @@ COMMIT;
 -- Note: The data in these temporary tables will be cleared on commit.
 SELECT * FROM temp_top_customers;
 SELECT * FROM temp_customer_product_sales;
+
+-- Clean up: Drop the temporary tables
+DROP TABLE temp_top_customers;
+DROP TABLE temp_customer_product_sales;
+
+-- Read the Temporary Tables article for more (made by Gemini) details: https://g.co/gemini/share/0d9ca83cf44d
