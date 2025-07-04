@@ -67,3 +67,5 @@ WHERE
 ORDER BY
     d.department_name,
     e.employee_name;
+
+-- Read the CTE article for more (made by Gemini) details: https://g.co/gemini/share/5745f1b34fc0
