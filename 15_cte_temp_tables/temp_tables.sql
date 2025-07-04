@@ -71,3 +71,86 @@ COMMIT;
 SELECT * FROM Customers_v;
 SELECT * FROM Products_v;
 SELECT * FROM Sales_v;
+
+
+-- Temporary table for top customers (data cleared on commit)
+CREATE GLOBAL TEMPORARY TABLE temp_top_customers (
+    customer_id NUMBER,
+    customer_name VARCHAR2(100),
+    total_sales_amount NUMBER(10, 2)
+) ON COMMIT DELETE ROWS;
+
+-- Temporary table for product sales by top customers (data cleared on commit)
+CREATE GLOBAL TEMPORARY TABLE temp_customer_product_sales (
+    customer_id NUMBER,
+    product_id NUMBER,
+    product_name VARCHAR2(100),
+    total_product_sales NUMBER(10, 2)
+) ON COMMIT DELETE ROWS;
+
+
+-- Insert top customers into the temporary table
+-- This query calculates the total sales amount for each customer and inserts the top 5 into the temporary table
+INSERT INTO temp_top_customers (customer_id, customer_name, total_sales_amount)
+SELECT
+    c.customer_id,
+    c.customer_name,
+    SUM(s.quantity * p.price) AS total_sales_amount
+FROM
+    Customers_v c
+JOIN
+    Sales_v s ON c.customer_id = s.customer_id
+JOIN
+    Products_v p ON s.product_id = p.product_id
+GROUP BY
+    c.customer_id, c.customer_name
+ORDER BY
+    total_sales_amount DESC
+FETCH FIRST 5 ROWS ONLY; -- Oracle 12c+ syntax for TOP N
+
+
+INSERT INTO temp_customer_product_sales (customer_id, product_id, product_name, total_product_sales)
+SELECT
+    s.customer_id,
+    p.product_id,
+    p.product_name,
+    SUM(s.quantity * p.price) AS total_product_sales
+FROM
+    Sales_v s
+JOIN
+    Products_v p ON s.product_id = p.product_id
+WHERE
+    s.customer_id IN (SELECT customer_id FROM temp_top_customers) -- Filter for top customers
+GROUP BY
+    s.customer_id, p.product_id, p.product_name;
+
+
+-- join the temporary tables and use analytic functions to get the top 3 products for each top customer.
+SELECT
+    ttc.customer_name,
+    tps.product_name,
+    tps.total_product_sales,
+    tps.product_rank
+FROM
+    temp_top_customers ttc
+JOIN (
+    SELECT
+        customer_id,
+        product_id,
+        product_name,
+        total_product_sales,
+        ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY total_product_sales DESC) AS product_rank
+    FROM
+        temp_customer_product_sales
+) tps ON ttc.customer_id = tps.customer_id
+WHERE
+    tps.product_rank <= 3
+ORDER BY
+    ttc.total_sales_amount DESC, ttc.customer_name, tps.product_rank;
+
+COMMIT;
+
+-- Check the temporary tables
+-- Note: The data in these temporary tables will be cleared on commit.
+SELECT * FROM temp_top_customers;
+SELECT * FROM temp_customer_product_sales;
