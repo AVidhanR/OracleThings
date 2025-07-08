@@ -7,7 +7,7 @@ SELECT
        FROM departments d
        WHERE d.department_id = e.department_id
     ) AS department_name,
-    LEAD(e.salary) OVER (
+    LEAD(e.salary, 1, 0) OVER (
         PARTITION BY e.department_id
         ORDER BY e.salary
     ) AS employees_next_salary,
