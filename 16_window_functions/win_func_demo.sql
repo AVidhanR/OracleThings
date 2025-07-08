@@ -42,4 +42,19 @@ FROM employees e
 WHERE e.salary >= 5000
 ORDER BY row_num, e.salary DESC;
 
+-- divides the output into defined number of tiles based on the "window"
+-- mentioned here it is according to the salary
+SELECT
+  employee_id,
+  first_name,
+  last_name,
+  salary,
+  NTILE(4) OVER (
+    ORDER BY salary DESC
+  ) AS salary_quartile 
+FROM      
+  employees;
+
+-- FIRST_VALUE() and LAST_VALUE() functions are used to get the first and last value in a window. No example is provided here, but you can use them similarly to LEAD() and LAG() functions.
+
 -- great article for understanding window functions: https://medium.com/@hisyam126/oracle-sql-window-functions-0114899572c4
