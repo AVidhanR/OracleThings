@@ -4,4 +4,6 @@
 
 ![identity domain - IAM](https://github.com/user-attachments/assets/81c4dc1c-6231-4f34-aa5d-5b8cf241867a)
 
+![compartment access](https://github.com/user-attachments/assets/6e8e5853-a51d-4a7d-a57e-df054e58f2ce)
+
 > source from oci foundations course.
