@@ -8,4 +8,6 @@
 
 ![nodes in oracle kubernetes engine - the types](https://github.com/user-attachments/assets/0e47bc9f-21a5-4a01-a17f-de66e8836d27)
 
+![oci cloud security](https://github.com/user-attachments/assets/bb4299f1-cb3f-4722-8233-a482f099750f)
+
 > source from oci foundations course.
