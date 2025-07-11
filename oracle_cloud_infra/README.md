@@ -6,4 +6,6 @@
 
 ![compartment access](https://github.com/user-attachments/assets/6e8e5853-a51d-4a7d-a57e-df054e58f2ce)
 
+![nodes in oracle kubernetes engine - the types](https://github.com/user-attachments/assets/0e47bc9f-21a5-4a01-a17f-de66e8836d27)
+
 > source from oci foundations course.
