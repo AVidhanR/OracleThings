@@ -10,4 +10,7 @@
 
 ![oci cloud security](https://github.com/user-attachments/assets/bb4299f1-cb3f-4722-8233-a482f099750f)
 
+![cloud guard scenario demo](https://github.com/user-attachments/assets/09271079-c3b4-4cce-ac7a-a25001c19ef8)
+
+
 > source from oci foundations course.
