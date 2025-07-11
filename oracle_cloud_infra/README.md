@@ -12,5 +12,6 @@
 
 ![cloud guard scenario demo](https://github.com/user-attachments/assets/09271079-c3b4-4cce-ac7a-a25001c19ef8)
 
+![oci vault example](https://github.com/user-attachments/assets/562317c0-27c1-4319-8de9-e6d32849eb55)
 
 > source from oci foundations course.
