@@ -14,4 +14,6 @@
 
 ![oci vault example](https://github.com/user-attachments/assets/562317c0-27c1-4319-8de9-e6d32849eb55)
 
+![oci compute workloads](https://github.com/user-attachments/assets/986df7c1-7a23-4f9f-bded-6df1d65bc0fe)
+
 > source from oci foundations course.
