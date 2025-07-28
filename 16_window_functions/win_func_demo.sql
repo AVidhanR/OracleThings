@@ -55,6 +55,7 @@ SELECT
 FROM      
   employees;
 
--- FIRST_VALUE() and LAST_VALUE() functions are used to get the first and last value in a window. No example is provided here, but you can use them similarly to LEAD() and LAG() functions.
+-- FIRST_VALUE() and LAST_VALUE() functions are used to get the first and last value in a window. 
+-- No example is provided here, but you can use them similarly to LEAD() and LAG() functions.
 
 -- great article for understanding window functions: https://medium.com/@hisyam126/oracle-sql-window-functions-0114899572c4
