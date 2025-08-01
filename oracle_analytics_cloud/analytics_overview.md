@@ -35,3 +35,11 @@
 <img width="1130" height="590" alt="log in detail" src="https://github.com/user-attachments/assets/80303431-cd24-4241-b3f9-b26ef1efc2b2" />
 
 <img width="1107" height="430" alt="sql code analysis" src="https://github.com/user-attachments/assets/c5db32b7-f56b-466d-ac67-5647a88a1ac0" />
+
+<img width="1051" height="452" alt="logical request" src="https://github.com/user-attachments/assets/600398d2-d13c-41bb-bc4f-4cc32430ce4a" />
+
+<img width="1106" height="417" alt="execution plan" src="https://github.com/user-attachments/assets/7197a7ed-d86f-46e5-ad5d-5f0059eeca08" />
+
+<img width="1146" height="431" alt="physical or DB requests" src="https://github.com/user-attachments/assets/a0a77ab0-b6ea-4f99-b20f-bc30f6e5ee2b" />
+
+
