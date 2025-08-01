@@ -30,3 +30,7 @@
 
 <img width="1190" height="534" alt="oa mobile" src="https://github.com/user-attachments/assets/22ad2d96-e854-4aad-bdc9-6c1618bc715e" />
 
+## Query Logs 
+
+<img width="1130" height="590" alt="image" src="https://github.com/user-attachments/assets/80303431-cd24-4241-b3f9-b26ef1efc2b2" />
+
