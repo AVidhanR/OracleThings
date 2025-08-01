@@ -32,5 +32,6 @@
 
 ## Query Logs 
 
-<img width="1130" height="590" alt="image" src="https://github.com/user-attachments/assets/80303431-cd24-4241-b3f9-b26ef1efc2b2" />
+<img width="1130" height="590" alt="log in detail" src="https://github.com/user-attachments/assets/80303431-cd24-4241-b3f9-b26ef1efc2b2" />
 
+<img width="1107" height="430" alt="sql code analysis" src="https://github.com/user-attachments/assets/c5db32b7-f56b-466d-ac67-5647a88a1ac0" />
