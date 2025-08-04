@@ -1,0 +1,45 @@
+## Analytics Overview (architechtures and illustrations only)
+
+<img width="1184" height="598" alt="OAC overview" src="https://github.com/user-attachments/assets/965f3806-ac5a-4770-9d70-c7ce65bb21d9" />
+
+<img width="1173" height="526" alt="comprehensive OA in-detail" src="https://github.com/user-attachments/assets/ce8d636a-97e8-4761-82a4-723e625904ea" />
+
+<img width="1733" height="896" alt="image" src="https://github.com/user-attachments/assets/cf483366-6e01-49f5-ad1a-12261c165cfd" />
+
+<img width="1107" height="649" alt="image" src="https://github.com/user-attachments/assets/3bcd3764-e746-4b0f-ab38-848d96ae78bf" />
+
+<!-- <img width="512" height="345" alt="image" src="https://github.com/user-attachments/assets/4ae1d0f7-b465-44bf-be3e-59d459917d58" /> -->
+
+<img width="1143" height="525" alt="image" src="https://github.com/user-attachments/assets/23a2c8c3-2b85-4c98-acce-10d519a55686" />
+
+<img width="1170" height="558" alt="image" src="https://github.com/user-attachments/assets/db7a656a-df92-4ab5-af26-5fe484a09aab" />
+
+<img width="1156" height="609" alt="image" src="https://github.com/user-attachments/assets/c92e6698-f853-41da-8cf8-ae20d3f4a71b" />
+
+<img width="1479" height="789" alt="image" src="https://github.com/user-attachments/assets/a006c80b-8bad-493a-9a39-dc56846adea6" />
+
+<img width="1117" height="592" alt="image" src="https://github.com/user-attachments/assets/a0167e8f-e80a-43bf-9366-adef7c123597" />
+
+<img width="1102" height="512" alt="image" src="https://github.com/user-attachments/assets/3c2297d8-af74-425d-9766-a563c05b1caf" />
+
+<img width="1042" height="555" alt="image" src="https://github.com/user-attachments/assets/0485a0b4-d186-4c46-a459-b5a34b982d05" />
+
+<img width="1101" height="424" alt="image" src="https://github.com/user-attachments/assets/f15babbc-a448-4012-af57-ee60d8fdd29c" />
+
+<img width="1154" height="638" alt="image" src="https://github.com/user-attachments/assets/511331cb-cf20-46f3-993f-1002eda7ef26" />
+
+<img width="1190" height="534" alt="oa mobile" src="https://github.com/user-attachments/assets/22ad2d96-e854-4aad-bdc9-6c1618bc715e" />
+
+## Query Logs 
+
+<img width="1130" height="590" alt="log in detail" src="https://github.com/user-attachments/assets/80303431-cd24-4241-b3f9-b26ef1efc2b2" />
+
+<img width="1107" height="430" alt="sql code analysis" src="https://github.com/user-attachments/assets/c5db32b7-f56b-466d-ac67-5647a88a1ac0" />
+
+<img width="1051" height="452" alt="logical request" src="https://github.com/user-attachments/assets/600398d2-d13c-41bb-bc4f-4cc32430ce4a" />
+
+<img width="1106" height="417" alt="execution plan" src="https://github.com/user-attachments/assets/7197a7ed-d86f-46e5-ad5d-5f0059eeca08" />
+
+<img width="1146" height="431" alt="physical or DB requests" src="https://github.com/user-attachments/assets/a0a77ab0-b6ea-4f99-b20f-bc30f6e5ee2b" />
+
+

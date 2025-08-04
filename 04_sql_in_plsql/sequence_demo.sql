@@ -3,15 +3,18 @@ SET serveroutput ON;
 
 -- run the below DROP command once
 DROP TABLE emp;
+/
 
 -- run the below CREATE command once
 CREATE TABLE emp AS
     SELECT * FROM hr.employees;
+/
 
 -- run the below SEQUENCE command once
 CREATE SEQUENCE emp_id_seq
     START WITH 207
     INCREMENT BY 1;
+/
 
 DECLARE
 BEGIN
