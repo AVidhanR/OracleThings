@@ -50,3 +50,7 @@
 
 <img width="1145" height="596" alt="image" src="https://github.com/user-attachments/assets/ef97b0f1-5c0f-429a-87ab-e60736d74d00" />
 
+## `rpdtojson` Command Syntax
+
+<img width="1039" height="573" alt="image" src="https://github.com/user-attachments/assets/655a38ba-a9c7-4149-8407-314a9d73dc89" />
+
