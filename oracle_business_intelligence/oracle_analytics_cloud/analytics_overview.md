@@ -50,7 +50,8 @@
 
 <img width="1145" height="596" alt="image" src="https://github.com/user-attachments/assets/ef97b0f1-5c0f-429a-87ab-e60736d74d00" />
 
-## `rpdtojson` Command Syntax
+## `rpdtojson` and `jsontorpd` Command Syntaxes
 
 <img width="1039" height="573" alt="image" src="https://github.com/user-attachments/assets/655a38ba-a9c7-4149-8407-314a9d73dc89" />
 
+<img width="1066" height="539" alt="image" src="https://github.com/user-attachments/assets/f260a138-ad9c-439d-b1db-6ed608ee97a4" />
