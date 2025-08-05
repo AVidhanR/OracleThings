@@ -42,4 +42,9 @@
 
 <img width="1146" height="431" alt="physical or DB requests" src="https://github.com/user-attachments/assets/a0a77ab0-b6ea-4f99-b20f-bc30f6e5ee2b" />
 
+## Parent - Child Hierarchy
+
+<img width="1150" height="586" alt="image" src="https://github.com/user-attachments/assets/28f39d40-0c38-489d-b54b-e91dcfcb0447" />
+
+
 
