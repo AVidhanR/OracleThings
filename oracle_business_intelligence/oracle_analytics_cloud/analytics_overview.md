@@ -46,5 +46,7 @@
 
 <img width="1150" height="586" alt="image" src="https://github.com/user-attachments/assets/28f39d40-0c38-489d-b54b-e91dcfcb0447" />
 
+## Skipped and Ragged Hierarchy
 
+<img width="1145" height="596" alt="image" src="https://github.com/user-attachments/assets/ef97b0f1-5c0f-429a-87ab-e60736d74d00" />
 
