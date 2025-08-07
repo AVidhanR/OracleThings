@@ -1,0 +1,21 @@
+payment_id,payment_method,provider,gateway,currency,supports_refund,risk_band
+1,PayPal,RuPay,Stripe,INR,True,Medium
+2,Wallet,Visa,Razorpay,INR,True,Low
+3,UPI,HDFC,PayU,INR,True,High
+4,PayPal,Google Pay,Braintree,INR,True,Medium
+5,Credit Card,SBI,PayU,INR,True,Medium
+6,Credit Card,Visa,PayU,INR,True,Medium
+7,PayPal,Google Pay,Stripe,INR,True,Low
+8,Credit Card,Paytm,Braintree,INR,True,High
+9,Credit Card,PayPal,Braintree,INR,True,High
+10,Debit Card,RuPay,CCAvenue,INR,True,Medium
+11,Credit Card,Google Pay,CCAvenue,INR,True,Low
+12,Wallet,Axis,PayU,INR,True,High
+13,PayPal,Mastercard,Braintree,INR,True,Medium
+14,Credit Card,PhonePe,Braintree,INR,True,High
+15,Wallet,PhonePe,Razorpay,INR,True,Medium
+16,NetBanking,Visa,Stripe,INR,True,Medium
+17,UPI,Visa,CCAvenue,INR,True,Low
+18,UPI,HDFC,Razorpay,INR,True,High
+19,PayPal,ICICI,PayU,INR,True,Low
+20,UPI,PhonePe,CCAvenue,INR,True,High

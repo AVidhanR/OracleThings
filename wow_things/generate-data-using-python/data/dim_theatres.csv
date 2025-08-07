@@ -1,0 +1,26 @@
+theatre_id,theatre_name,operator,city,state,country,num_screens,total_seats,premium_formats
+1,Carnival Cinemas Surat #01,Carnival Cinemas,Surat,GJ,IN,11,1408,Dolby Atmos
+2,Cinemark Indore #02,Cinemark,Indore,MP,IN,7,1624,IMAX
+3,INOX Visakhapatnam #03,INOX,Visakhapatnam,AP,IN,8,1912,Dolby Atmos
+4,AMC Kolkata #04,AMC,Kolkata,WB,IN,11,2607,"3D, Dolby Atmos"
+5,INOX Indore #05,INOX,Indore,MP,IN,9,1674,"3D, Dolby Atmos"
+6,Cinepolis Kolkata #06,Cinepolis,Kolkata,WB,IN,9,2214,"3D, IMAX"
+7,AMC Nagpur #07,AMC,Nagpur,MH,IN,5,470,3D
+8,AMC Kolkata #08,AMC,Kolkata,WB,IN,11,1925,IMAX
+9,PVR Visakhapatnam #09,PVR,Visakhapatnam,AP,IN,9,891,None
+10,AMC New Delhi #10,AMC,New Delhi,DL,IN,5,585,Dolby Atmos
+11,Carnival Cinemas New Delhi #11,Carnival Cinemas,New Delhi,DL,IN,4,960,IMAX
+12,Cinepolis Chennai #12,Cinepolis,Chennai,TN,IN,4,872,"4DX, Dolby Atmos"
+13,Carnival Cinemas Mumbai #13,Carnival Cinemas,Mumbai,MH,IN,8,1472,"4DX, IMAX"
+14,AMC Indore #14,AMC,Indore,MP,IN,7,784,IMAX
+15,PVR Bengaluru #15,PVR,Bengaluru,KA,IN,10,1070,Dolby Atmos
+16,PVR Nagpur #16,PVR,Nagpur,MH,IN,4,596,4DX
+17,AMC Bengaluru #17,AMC,Bengaluru,KA,IN,9,1863,Dolby Atmos
+18,Carnival Cinemas Bengaluru #18,Carnival Cinemas,Bengaluru,KA,IN,9,1629,"3D, None"
+19,Cinepolis Visakhapatnam #19,Cinepolis,Visakhapatnam,AP,IN,6,1086,"Dolby Atmos, IMAX"
+20,INOX Lucknow #20,INOX,Lucknow,UP,IN,7,1505,None
+21,PVR Kochi #21,PVR,Kochi,KL,IN,10,2330,3D
+22,Cinemark Jaipur #22,Cinemark,Jaipur,RJ,IN,7,1372,"3D, 4DX"
+23,Cinepolis Kochi #23,Cinepolis,Kochi,KL,IN,9,1962,"4DX, None"
+24,PVR Surat #24,PVR,Surat,GJ,IN,3,519,"3D, IMAX"
+25,Cinepolis Kolkata #25,Cinepolis,Kolkata,WB,IN,8,1544,4DX
