@@ -55,3 +55,8 @@
 <img width="1039" height="573" alt="image" src="https://github.com/user-attachments/assets/655a38ba-a9c7-4149-8407-314a9d73dc89" />
 
 <img width="1066" height="539" alt="image" src="https://github.com/user-attachments/assets/f260a138-ad9c-439d-b1db-6ed608ee97a4" />
+
+## Adv. Date Formats
+
+<img width="1285" height="848" alt="image" src="https://github.com/user-attachments/assets/4262d558-f91b-4c23-b48b-52971dbd952d" />
+
