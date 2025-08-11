@@ -49,5 +49,5 @@ BEGIN
 END;
 /
 
--- for reference
+-- for verification
 SELECT * FROM emp;
