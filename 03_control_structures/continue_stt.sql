@@ -15,7 +15,6 @@ BEGIN
 			CONTINUE WHEN (MOD(v_inner * v_outer, 3) = 0);
 			dbms_output.put_line(' The inner loop var: ' || v_inner);
 		END LOOP inner_loop;
-
 	END LOOP outer_loop;
 END;
 /
@@ -35,7 +34,6 @@ BEGIN
 			CONTINUE outer_loop WHEN v_inner = 10;
 			dbms_output.put_line(' The inner loop var: ' || v_inner);
 		END LOOP inner_loop;
-
 	END LOOP outer_loop;
 END;
 /
