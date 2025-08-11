@@ -4,7 +4,7 @@ SET serveroutput ON;
 -- STRONG CURSOR REF example (RESTRICTIVE CURSOR)
 DECLARE
     -- strong REF CURSOR as it is having a RETURN TYPE
-	TYPE rct_emp IS REF CURSOR return hr.employees%ROWTYPE;
+	TYPE rct_emp IS REF CURSOR RETURN hr.employees%ROWTYPE;
 	rc_emp RCT_EMP;
 	r_emp hr.employees%ROWTYPE;
 BEGIN
