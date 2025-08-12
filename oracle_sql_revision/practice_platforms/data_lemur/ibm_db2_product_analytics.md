@@ -82,3 +82,66 @@ from unique_queries_analytics
 group by unique_queries
 order by unique_queries asc;
 ```
+
+## SQL query breakdown
+
+Let's break down your SQL query step by step using **simple language** so you understand **what**, **why**, and **how** each part works.
+
+### 🧠 Goal of the Query
+
+You want to:
+- Count how many **unique queries** each employee ran during **Q3 2023** (July to September).
+- Group employees by how many queries they ran (e.g., 0, 1, 2, 3...).
+- Count how many employees fall into each group — this forms a **histogram**.
+  
+### 🔹 Step 1: CTE (Common Table Expression)
+
+```sql
+with unique_queries_analytics as (
+  select
+    e.employee_id,
+    count(q.query_id) as unique_queries
+  from
+    queries q right join employees e
+    on (q.employee_id = e.employee_id)
+    and extract(year from q.query_starttime) = 2023
+    and extract(month from q.query_starttime) in (7, 8, 9)
+  group by e.employee_id
+)
+```
+
+### ✅ What this above query does:
+
+- **`with unique_queries_analytics as (...)`**: This creates a temporary result (like a virtual table) that we can use later.
+- **`right join employees e`**: Ensures **all employees** are included, even if they didn’t run any queries.
+- **`on (...)`**: Matches queries to employees **only if** the query was run in **Q3 2023**.
+- **`count(q.query_id)`**: Counts how many queries each employee ran during that time.
+- **`group by e.employee_id`**: Groups the results by employee so we get one row per employee.
+
+### 🔍 Why use `RIGHT JOIN`?
+
+Because we want to include employees who **did not run any queries** — if we used `INNER JOIN`, those employees would be excluded.
+
+### 🔹 Step 2: Final SELECT
+
+```sql
+select  
+  unique_queries,
+  count(employee_id) as employee_count
+from unique_queries_analytics
+group by unique_queries
+order by unique_queries asc;
+```
+
+### ✅ What this does:
+
+- **`select unique_queries`**: This is the number of queries each employee ran.
+- **`count(employee_id)`**: Counts how many employees ran that number of queries.
+- **`group by unique_queries`**: Groups employees by how many queries they ran.
+- **`order by unique_queries asc`**: Sorts the result from 0 queries upward.
+
+>[!IMPORTANT]
+> This query is:
+> - **Efficient**: Uses a CTE to organize logic.
+> - **Inclusive**: Uses `RIGHT JOIN` to include employees with no activity.
+> - **Clear**: Groups and counts employees by query activity.
