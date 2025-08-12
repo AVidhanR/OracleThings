@@ -30,7 +30,7 @@ id | name  | age
 
 You want to **remove duplicates** based on `name` and `age`, and **keep only one copy**.
 
-## ✅ Method 1: Using `ROW_NUMBER()` (Best for modern databases)
+### ✅ Method 1: Using `ROW_NUMBER()` (Best for modern databases)
 
 This method gives each duplicate a number and deletes all except the first.
 
@@ -51,7 +51,7 @@ WHERE id IN (
 - `PARTITION BY name, age` means duplicates are based on those columns.
 - Only rows with number > 1 are deleted.
 
-## ✅ Method 2: Using `DELETE` with `JOIN` (Good for MySQL)
+### ✅ Method 2: Using `DELETE` with `JOIN` (Good for MySQL)
 
 ```sql
 DELETE p1 FROM people p1
@@ -63,7 +63,7 @@ ON p1.name = p2.name AND p1.age = p2.age AND p1.id > p2.id;
 - This compares each row with others.
 - If two rows have same `name` and `age`, it deletes the one with the bigger `id`.
 
-## ✅ Method 3: Using `GROUP BY` and `MIN(id)`
+### ✅ Method 3: Using `GROUP BY` and `MIN(id)`
 
 ```sql
 DELETE FROM people
@@ -79,7 +79,7 @@ WHERE id NOT IN (
 - `MIN(id)` keeps the first one.
 - Deletes all others.
 
-## ✅ Method 4: Create a new table with unique rows
+### ✅ Method 4: Create a new table with unique rows
 
 ```sql
 CREATE TABLE new_people AS
@@ -95,7 +95,7 @@ RENAME TABLE new_people TO people;
 - Deletes the old one.
 - Renames the new one.
 
-## ✅ Method 5: Use `DISTINCT` to copy unique rows
+### ✅ Method 5: Use `DISTINCT` to copy unique rows
 
 ```sql
 INSERT INTO new_people (name, age)
@@ -105,7 +105,7 @@ SELECT DISTINCT name, age FROM people;
 **Explanation:**
 - Copies only unique rows into another table.
 
-## 🛡️ Tips Before Deleting
+### 🛡️ Tips Before Deleting
 - Always run a `SELECT` first to **see what will be deleted**.
 - Make a **backup** of your table if possible.
 - Choose the method that works best for your database (MySQL, PostgreSQL, SQL Server, etc.).
