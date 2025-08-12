@@ -60,3 +60,4 @@
 
 <img width="1285" height="848" alt="image" src="https://github.com/user-attachments/assets/4262d558-f91b-4c23-b48b-52971dbd952d" />
 
+<!-- ![elena-prokofyeva-NDuPLKYRXQU-unsplash](https://github.com/user-attachments/assets/a18f79c4-0600-4381-8511-ff75770dfd55) -->
