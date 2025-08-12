@@ -45,3 +45,39 @@ select distinct round(
   (select total_orders from total_things))::NUMERIC, 1) as mean
 from items_per_order;
 ```
+
+## 🧠 **Why use `::NUMERIC` or `::DECIMAL`?**
+
+The `::NUMERIC` (or `::DECIMAL`) syntax is used in SQL to **explicitly cast** a value to a numeric data type. Here's why and when you'd want to use it:
+
+### 1. **Ensure accurate division**
+In SQL, dividing two integers returns an **integer result**, which means it **truncates** the decimal part.
+
+#### Example:
+```sql
+SELECT 5 / 2;  -- Returns 2, not 2.5
+```
+
+To get a **decimal result**, you need to cast at least one value to a numeric type:
+
+```sql
+SELECT 5::NUMERIC / 2;  -- Returns 2.5
+```
+
+### 2. **Enable rounding and formatting**
+If you're calculating averages or percentages, casting to `NUMERIC` allows you to use functions like `ROUND()` properly:
+
+```sql
+SELECT ROUND(total_items::NUMERIC / total_orders, 1);
+```
+
+Without casting, `ROUND()` might not behave as expected if the division result is an integer.
+
+### 3. **Avoid implicit type errors**
+Some databases (like PostgreSQL) are strict about types. If you're mixing types (e.g., integer and decimal), casting helps avoid errors or unexpected behavior.
+
+> ![IMPORTANT]
+> Use `::NUMERIC` when:
+> - You're doing **division** and want **decimal precision**
+> - You're using **`ROUND()`** or other numeric functions
+> - You want to **control the data type** for consistency or compatibility
