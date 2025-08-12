@@ -76,7 +76,7 @@ Without casting, `ROUND()` might not behave as expected if the division result i
 ### 3. **Avoid implicit type errors**
 Some databases (like PostgreSQL) are strict about types. If you're mixing types (e.g., integer and decimal), casting helps avoid errors or unexpected behavior.
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Use `::NUMERIC` when:
 > - You're doing **division** and want **decimal precision**
 > - You're using **`ROUND()`** or other numeric functions
