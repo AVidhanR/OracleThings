@@ -2,11 +2,11 @@ CVS Health is trying to better understand its pharmacy sales, and how well diffe
 
 Write a query to find the top 3 most profitable drugs sold, and how much profit they made. Assume that there are no ties in the profits. Display the result from the highest to the lowest total profit.
 
-Definition:
+## Definition:
 
 cogs stands for Cost of Goods Sold which is the direct cost associated with producing the drug.
+
 Total Profit = Total Sales - Cost of Goods Sold
-If you like this question, try out Pharmacy Analytics (Part 2)!
 
 ### pharmacy_sales Table:
 
