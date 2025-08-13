@@ -49,4 +49,20 @@ group by manufacturer
 order by 
   sum(total_sales) desc, 
   manufacturer asc;
+
+-- don't wanna call the sum() function 2 times
+with pharmacy_analytics as (
+  select  
+    manufacturer,
+    sum(total_sales) as aggregated_total_sales
+  from pharmacy_sales
+  group by manufacturer
+  order by
+    aggregated_total_sales desc,
+    manufacturer asc
+)
+select
+  manufacturer,
+  concat('$', round(aggregated_total_sales/1000000.0), ' million') as sale
+from pharmacy_analytics;
 ```
