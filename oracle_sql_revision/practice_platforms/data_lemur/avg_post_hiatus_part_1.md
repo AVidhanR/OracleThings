@@ -1,4 +1,3 @@
-/*
 ## 📅 Days Between First and Last Facebook Post in 2021
 
 ### 🧾 Problem Statement
@@ -35,8 +34,9 @@ calculate the number of days between their **first** and **last** post of the ye
 - User `661093` posted on 07/08 and 07/29 → 21 days apart  
 - User `004239` posted only once → excluded
 
-*/
+### 🧮 SQL Query
 
+```sql
 select
   user_id,
   extract(day from (max(post_date) - min(post_date))) as days_between
@@ -44,3 +44,4 @@ from posts
 where extract(year from (post_date)) = '2021'
 group by user_id
 having count(user_id) > 1;
+```
