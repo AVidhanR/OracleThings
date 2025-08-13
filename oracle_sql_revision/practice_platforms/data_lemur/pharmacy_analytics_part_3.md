@@ -1,10 +1,12 @@
 CVS Health wants to gain a clearer understanding of its pharmacy sales and the performance of various products.
 
+### Task
+
 Write a query to calculate the total drug sales for each manufacturer. Round the answer to the nearest million and report your results in descending order of total sales. In case of any duplicates, sort them alphabetically by the manufacturer name.
 
 Since this data will be displayed on a dashboard viewed by business stakeholders, please format your results as follows: "$36 million".
 
-### pharmacy_sales Table:
+### `pharmacy_sales` Table:
 
 | Column Name   | Type     |
 |---------------|----------|
@@ -15,7 +17,7 @@ Since this data will be displayed on a dashboard viewed by business stakeholders
 | manufacturer  | varchar  |
 | drug          | varchar  |
 
-### pharmacy_sales Example Input:
+### `pharmacy_sales` Example Input:
 
 | product_id | units_sold | total_sales | cogs       | manufacturer | drug              |
 |------------|------------|-------------|------------|--------------|-------------------|
@@ -39,5 +41,12 @@ The total sales for Biogen is $4 million ($2,041,758.41 + $500,101.61 + $1,084,2
 ### 🧮 SQL Query
 
 ```sql
-
+select
+  manufacturer,
+  concat('$', round(sum(total_sales)/1000000.0), ' million') as sale
+from pharmacy_sales
+group by manufacturer
+order by 
+  sum(total_sales) desc, 
+  manufacturer asc;
 ```
