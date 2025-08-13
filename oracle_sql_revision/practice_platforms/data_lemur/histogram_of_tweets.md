@@ -1,4 +1,3 @@
-/*
 ## 📊 Histogram of Tweets per User in 2022
 
 ### 🧾 Problem Statement
@@ -9,8 +8,6 @@ The goal is to:
 - Group users by their tweet count.
 - Output the tweet count as a bucket and the number of users who fall into that bucket.
 
----
-
 ### 🗃️ Table: `tweets`
 
 | Column Name | Type      |
@@ -19,8 +16,6 @@ The goal is to:
 | user_id     | integer   |
 | msg         | string    |
 | tweet_date  | timestamp |
-
----
 
 ### 🧪 Example Input
 
@@ -32,8 +27,6 @@ The goal is to:
 | 241425   | 254     | If the salary is so competitive why won’t you tell me what it is? | 03/01/2022 00:00:00 |
 | 231574   | 148     | I no longer have a manager. I can't be managed                 | 03/23/2022 00:00:00 |
 
----
-
 ### 📤 Expected Output
 
 | tweet_bucket | users_num |
@@ -41,15 +34,16 @@ The goal is to:
 | 1            | 2         |
 | 2            | 1         |
 
-**Explanation**:  
+### Explanation  
 - User `111` posted 2 tweets in 2022.  
 - Users `254` and `148` each posted 1 tweet in 2022.  
 - So, the histogram shows:
   - 2 users posted 1 tweet.
   - 1 user posted 2 tweets.
-*/
--- solution
 
+### 🧮 SQL Query
+
+```sql
 WITH tweet_totals AS (
   SELECT  
     user_id,
@@ -66,3 +60,4 @@ SELECT
   COUNT(user_id) AS users_num
 FROM tweet_totals
 GROUP BY tweet_bucket;
+```
