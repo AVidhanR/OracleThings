@@ -1,4 +1,3 @@
-/*
 ## 🧠 Data Science Job Candidate Filter
 
 ### 🧾 Problem Statement
@@ -36,8 +35,10 @@ Given a table of candidates and their skills, identify candidates who are best s
 **Explanation**:  
 Candidate `123` is selected because they possess all three required skills: Python, Tableau, and PostgreSQL.  
 Candidate `345` is not selected because they are missing PostgreSQL.
-*/
 
+### 🧮 SQL Query
+
+```sql
 with two_req_skills as (
   select candidate_id
   from candidates
@@ -51,3 +52,4 @@ most_req_skill as (
 select distinct t.candidate_id
 from two_req_skills t join most_req_skill m 
 on t.candidate_id = m.candidate_id;
+```
