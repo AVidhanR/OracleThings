@@ -66,4 +66,21 @@
 
 <img width="906" height="461" alt="image" src="https://github.com/user-attachments/assets/fa526432-0e93-483f-99c4-05fde41e944a" />
 
+## System Settings
+
+<img width="1028" height="501" alt="Analytic Content" src="https://github.com/user-attachments/assets/764a8c81-3e71-4df5-a92e-7918ba483cc2" />
+
+<img width="1089" height="474" alt="Format Settings" src="https://github.com/user-attachments/assets/a4b388eb-4695-490d-b318-c94720185241" />
+
+<img width="1052" height="581" alt="Performance and Compatibility Options" src="https://github.com/user-attachments/assets/16623327-2615-4070-84e1-536940ae14b5" />
+
+<img width="1053" height="476" alt="Prompt Settings" src="https://github.com/user-attachments/assets/a58ec6d3-047c-46d3-b5a5-01832d118217" />
+
+<img width="992" height="477" alt="Usage Tracking Settings" src="https://github.com/user-attachments/assets/b97e1ec8-888a-4c8a-a56c-4bd49da1516d" />
+
+<img width="1156" height="589" alt="Connection and Security Settings" src="https://github.com/user-attachments/assets/5795d064-2688-4366-9a0c-4e59d61d2339" />
+
+<img width="1049" height="609" alt="View Settings" src="https://github.com/user-attachments/assets/556c4282-2fef-4da1-b2bc-6ed04acd4554" />
+
+<img width="1026" height="475" alt="Other Settings" src="https://github.com/user-attachments/assets/17723cf2-0036-4607-b51e-adc1a706a60e" />
 
