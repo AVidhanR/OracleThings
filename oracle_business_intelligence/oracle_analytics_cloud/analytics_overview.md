@@ -61,3 +61,9 @@
 <img width="1285" height="848" alt="image" src="https://github.com/user-attachments/assets/4262d558-f91b-4c23-b48b-52971dbd952d" />
 
 <!-- ![elena-prokofyeva-NDuPLKYRXQU-unsplash](https://github.com/user-attachments/assets/a18f79c4-0600-4381-8511-ff75770dfd55) -->
+
+## Agent's Intro
+
+<img width="906" height="461" alt="image" src="https://github.com/user-attachments/assets/fa526432-0e93-483f-99c4-05fde41e944a" />
+
+
