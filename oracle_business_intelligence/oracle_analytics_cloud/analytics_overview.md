@@ -84,3 +84,12 @@
 
 <img width="1026" height="475" alt="Other Settings" src="https://github.com/user-attachments/assets/17723cf2-0036-4607-b51e-adc1a706a60e" />
 
+## OAC Query Cache
+
+<img width="1133" height="391" alt="Query cache intro" src="https://github.com/user-attachments/assets/cffedb44-29e6-40c7-b247-638f9d1e94c8" />
+
+<img width="1096" height="369" alt="Adv. of query caching" src="https://github.com/user-attachments/assets/8340d476-d6ab-4888-957f-41eb00ef0c8e" />
+
+<img width="1112" height="585" alt="Clear Cache Manually" src="https://github.com/user-attachments/assets/140d92d1-cd80-4c1c-a3e9-70048f3c05ad" />
+
+<img width="1111" height="515" alt="Cache Hit Conditions" src="https://github.com/user-attachments/assets/a2b9013f-dc49-44f4-b8ae-a79ae60ff843" />
